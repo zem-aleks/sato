@@ -1,5 +1,5 @@
 <footer>
-    <table></table>
+    <table>test</table>
 </footer>
 </body>
 </html>
