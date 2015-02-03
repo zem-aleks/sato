@@ -33,7 +33,5 @@
         <? if ($this->session->userdata('is_logged_in')): ?>
             <div class="backend"><a href="/admin">Перейти в админку</a></div>
         <? endif; ?>
-
-
-
-
+        
+        <div class="wrapper"></div>
