@@ -1,0 +1,23 @@
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,time,mark,audio,video { margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent; } 
+table { border-collapse:collapse;border-spacing:0; }
+
+@font-face{font-family:DinBold;src:url(../fonts/DinBold.ttf);font-weight:normal;font-style:normal;}
+@font-face{font-family:NeueLight;src:url(../fonts/HelveticaNeueCyr-Light.otf);font-weight:normal;font-style:normal;}
+html, body { line-height:1; text-align: left; height: 100%; font-size: 16px; font-family: 'Arial'; color: #000; background-color: #fff;}
+.clear{ clear: both;}
+.frontend,.backend{position:fixed; top:30%;z-index: 100;}
+a{text-decoration: none; color: #362f2d;}
+.frontend a{
+    font-size:0; 
+    width:35px; 
+    height:150px; 
+    background: url("../images/admin/site.png") 0 0 no-repeat transparent !important;
+    float:left;
+}
+.backend a{
+    font-size:0; 
+    width:35px; 
+    height:150px; 
+    background: url("../images/admin/admin.png") 0 0 no-repeat transparent !important;
+    float:left;
+}

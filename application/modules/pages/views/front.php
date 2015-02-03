@@ -1,0 +1,1 @@
+<?phpprint ($data['content']);?>

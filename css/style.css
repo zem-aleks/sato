@@ -1,0 +1,89 @@
+body {
+	background: #b6b6b6;
+	margin: 0;
+	padding: 0;
+	font-family: arial;
+}
+#login_form {
+	width: 300px;
+	background: #f0f0f0 url(../img/login_bg.jpg) repeat-x 0 0;
+	border: 1px solid white;
+	margin: 250px auto 0;
+	padding: 1em;
+	-moz-border-radius: 3px;
+}
+h1,h2,h3,h4,h5 {
+	margin-top: 0;
+	font-family: arial black, arial;
+	text-align: center;
+}
+
+input[type=text], input[type=password] {
+	display: block;
+	margin: 0 0 1em 0;
+	width: 280px;
+	border: 5px;
+	-moz-border-radius: 1px;
+	-webkit-border-radius: 1px;
+	padding: 4px 14px;
+        line-height: 1em;
+	width: 100%;
+}
+
+input[type=submit], form a {
+	border: none;
+	margin-right: 1em;
+	padding: 8px 20px;
+	text-decoration: none;
+	font-size: 16px;
+	font-weight: bold;
+	-moz-border-radius: 4px;
+	background: #348075;
+	color: white;
+	box-shadow: 0 1px 0 white;
+	-moz-box-shadow: 0 1px 0 white;
+	-webkit-box-shadow: 0 1px 0 white;
+
+}
+
+input[type=submit]:hover, form a:hover {
+	background: #287368;
+	cursor: pointer;
+}
+
+
+
+
+/* Validation error messages */
+
+.error {
+	color: #393939;
+	font-size: 15px;
+}
+
+fieldset {
+	width: 300px;
+	margin: auto;
+	margin-bottom: 2em;
+	display: block;
+}
+
+/* FOR FUN */
+
+h1 {
+	text-shadow: 0 1px 0 white;
+}
+
+/* Not necessary. Just the "tutorial created by" stuff at the bottom */
+
+#tutInfo {
+	background: #e3e3e3;
+	border-top: 1px solid white;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	padding: .7em .7em .7em 2em;
+}
+.alert{padding:15px;margin-bottom:20px;border:1px solid transparent;border-radius:4px}.alert h4{margin-top:0;color:inherit}
+.alert-success{color:#3c763d;background-color:#dff0d8;border-color:#d6e9c6}.alert-success hr{border-top-color:#c9e2b3}
+.alert-danger{color:#a94442;background-color:#f2dede;border-color:#ebccd1}.alert-danger hr{border-top-color:#e4b9c0}
