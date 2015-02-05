@@ -1,12 +1,19 @@
 html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,time,mark,audio,video { margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent; } 
 table { border-collapse:collapse;border-spacing:0; }
 
-@font-face{font-family:DinBold;src:url(../fonts/DinBold.ttf);font-weight:normal;font-style:normal;}
-@font-face{font-family:NeueLight;src:url(../fonts/HelveticaNeueCyr-Light.otf);font-weight:normal;font-style:normal;}
+@font-face{font-family: FuturaNewBold;src:url(/fonts/FuturaNewBold.otf);font-weight:normal;font-style:normal;}
+
+@font-face{font-family: Roboto Medium;src:url(/fonts/Roboto-Medium.ttf);font-weight:normal;font-style:normal;}
+
+@font-face{font-family: Roboto Light;src:url(/fonts/Roboto-Light.ttf);font-weight:normal;font-style:normal;}
+
+@font-face{font-family: Futura New Book Regular;src:url(/fonts/FuturaNewBookRegular.ttf);font-weight:normal;font-style:normal;}
+
 html, body { line-height:1; text-align: left; height: 100%; font-size: 16px; font-family: 'Arial'; color: #000; background-color: #fff;}
 .clear{ clear: both;}
 .frontend,.backend{position:fixed; top:30%;z-index: 100;}
 a{text-decoration: none; color: #362f2d;}
+ul {list-style-type: none;}
 .frontend a{
     font-size:0; 
     width:35px; 
@@ -20,4 +27,187 @@ a{text-decoration: none; color: #362f2d;}
     height:150px; 
     background: url("../images/admin/admin.png") 0 0 no-repeat transparent !important;
     float:left;
+}
+body {
+    font-family: Arial;
+    font-size: 18px;
+    color: #000;
+    margin: 0 0;
+    background-color: pink;
+}
+.main-wrapper {
+    min-height: 100%;
+}
+header {
+    background-color: #e6252e;
+    height: 150px;
+    width: 100%;
+    color: #fff;
+    overflow: hidden;
+}
+.wrapper {
+    margin: 0 auto;
+    width: 960px;
+}
+header .btm-line .logo-main {
+    display: inline-block;
+    vertical-align: top;
+    width: 200px;
+    height: 20px;
+    background: url(/images/front/logo-main.jpg) -1px -5px no-repeat;
+    padding-top: 73px;
+    color: #fff;
+    text-align: center;
+    margin-right: 49px;
+    margin-top: -17px;
+    font-family: 'Futura New Book Regular', 'Myriad Pro';
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+header .top-line {
+    height: 40px;
+    margin-top: 22px;
+}
+header .top-line > div {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 16px;
+    border-bottom: 1px solid #f07c82;
+    margin-right: 26px;
+}
+header .top-line .sign-up {
+    margin-left: 537px;
+}
+header .top-line .cart {
+    font-size: 20px;
+    vertical-align: middle;
+    border: 1px dashed #f26c71;
+    width: 163px;
+    height: 36px;
+    line-height: 34px;
+    margin-right: 0px;
+    margin-left: 8px;
+    padding-left: 50px;
+    background: url(/images/front/cart.png)17px 7px no-repeat;
+}
+header .btm-line {    
+    height: 75px;
+}
+header .btm-line .slogan {
+    width: 310px;
+    font-size: 20px;
+    line-height: 26px;
+    margin-right: 30px;
+    margin-top: 2px;
+}
+header .btm-line .phone {
+    font-size: 50px;
+    font-family: 'Roboto Light', 'Myriad Pro';
+    margin-top: 10px;
+}
+header .btm-line .phone span {
+    font-family: 'Roboto Medium';
+}
+header .btm-line > div {
+    display: inline-block;
+    vertical-align: top;
+}
+nav.main {
+    background-color: #fff;
+    margin: 0 auto;
+    width: 960px;
+    font-weight: bold;
+}
+nav.main ul {
+    font-size: 0px;
+}
+nav.main ul li {
+    display: inline-block;
+    vertical-align: bottom;
+}
+nav.main ul li:last-child a {
+    margin-right: 0px;
+}
+nav.main ul li:first-child a {
+    margin-left: 7px;
+}
+nav.main ul li a {
+    font-size: 16px;  
+    padding: 32px 0 20px;
+    display: block;  
+    margin-right: 35px;
+    border-bottom: 6px solid transparent;
+}
+nav.main ul li a.active {
+    border-bottom: 6px solid #fddf52;
+}
+nav ul li a:hover {
+    color: #f13e45;
+}
+main {
+    padding-bottom: 210px;
+}
+footer {
+    height: 200px;
+    margin-top: -200px;
+    position: relative;
+    background-color: #f6f6f6;
+    overflow: hidden;
+}
+footer nav {
+    height: 40px;
+    margin-top: 32px;
+    margin-bottom: 30px;
+}
+footer nav ul {
+    font-size: 0;
+}
+footer nav ul li {
+    display: inline-block;
+    vertical-align: bottom;
+}
+footer nav ul li a {
+    font-size: 14px;    
+    font-weight: bold;
+    display: block;  
+    margin-right: 25px;
+    line-height: 25px;
+}
+footer nav ul li .logo {
+    width: 100px;
+    height: 40px;
+    margin-left: 37px;
+    background: url(/images/front/logo-fter.jpg) 0px 10px no-repeat;
+}
+footer nav ul li:last-child a {
+    margin-right: 0;
+}
+footer .btm-line {
+    height: 65px;
+}
+footer .btm-line .details {
+    display: inline-block;
+    vertical-align: top;
+    width: 106px;
+    height: 50px;
+    padding: 14px 20px 0px 119px;
+    margin-right: 33px;
+    margin-left: 38px;
+    font-size: 16px;
+    line-height: 18px;
+    background: url(/images/front/logo-details.jpg) 2px 18px no-repeat #fff;
+}
+footer .btm-line .copyright {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
+    line-height: 16px;
+    width: 580px;
+}
+footer .btm-line .copyright b {
+    line-height: 32px;
+    padding-left: 3px;
+}
+footer .btm-line .copyright .about {
+    margin-top: -7px;
 }
