@@ -36,7 +36,7 @@
             
             <div class="main-wrapper">
                 <header>
-                    <div class="wrapper">
+                    <div class="container">
                         <div class="top-line">
                             <div class="sign-up">Вход</div>
                             <div class="sign-in">Регистрация</div>
@@ -60,4 +60,5 @@
                         <li><a href="">КОНТАКТЫ</a></li>
                     </ul>
                 </nav>
+                <main>
             

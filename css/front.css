@@ -3,9 +3,11 @@ table { border-collapse:collapse;border-spacing:0; }
 
 @font-face{font-family: FuturaNewBold;src:url(/fonts/FuturaNewBold.otf);font-weight:normal;font-style:normal;}
 
+@font-face{font-family: Roboto Light;src:url(/fonts/Roboto-Light.ttf);font-weight:normal;font-style:normal;}
+
 @font-face{font-family: Roboto Medium;src:url(/fonts/Roboto-Medium.ttf);font-weight:normal;font-style:normal;}
 
-@font-face{font-family: Roboto Light;src:url(/fonts/Roboto-Light.ttf);font-weight:normal;font-style:normal;}
+@font-face{font-family: Roboto Bold;src:url(/fonts/Roboto-Bold.ttf);font-weight:normal;font-style:normal;}
 
 @font-face{font-family: Futura New Book Regular;src:url(/fonts/FuturaNewBookRegular.ttf);font-weight:normal;font-style:normal;}
 
@@ -38,6 +40,11 @@ body {
 .main-wrapper {
     min-height: 100%;
 }
+.heading {
+    font-family: 'Roboto Bold';
+    font-size: 30px;
+    text-align: center;
+}
 header {
     background-color: #e6252e;
     height: 150px;
@@ -45,7 +52,7 @@ header {
     color: #fff;
     overflow: hidden;
 }
-.wrapper {
+.container {
     margin: 0 auto;
     width: 960px;
 }
@@ -147,6 +154,94 @@ nav ul li a:hover {
 main {
     padding-bottom: 210px;
 }
+section.desk {
+    background: url(/images/.jpg) center center no-repeat #050505;
+    height: 240px;
+    padding-top: 50px;
+}
+section.desk .heading {
+    color: #fff;
+}
+section.desk .items {
+    color: #fff;
+    font-size: 20px;
+}
+section.models .heading {
+    margin-top: 70px;
+    margin-bottom: 60px;
+}
+section.models .products {
+    height: 480px;
+    width: 830px;
+    margin: 0 auto;
+    text-align: center;
+}
+section .item {
+    width: 220px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 120px;
+}
+section .item:last-child {
+    margin-right: 0px;
+}
+section.models .products .item {
+    font-family: 'Roboto Bold';
+    font-size: 24px;
+    text-align: left;
+}
+section.models .products .item .pic {
+    max-height: 240px;
+    max-width: 220px;
+    overflow: hidden;
+}
+section.models .products .item span {
+    font-family: 'Roboto Light'
+}
+section.models .products .item .price {
+    color: #ff585d;
+}
+section.compare .heading {
+    margin-top: 90px;
+    margin-bottom: 80px;
+}
+section.compare table thead {
+    font-weight: bold;
+}
+section.compare table tr td:first-child {
+    width: 320px;
+}
+section.compare table tr td {
+    width: 190px;
+    border: 1px solid;
+}
+section.compare table tr {
+    height: 50px;
+}
+section.advantages {
+    background-color: yellow;
+    padding: 60px 0;
+}
+section.advantages .heading span {
+    font-family: 'Roboto Light'
+}
+section.advantages .point {
+    padding: 25px 0 25px 100px;
+}
+section.advantages .one {
+    width: 740px;
+    background-color: #fff;
+    margin-top: 32px;
+}
+section.advantages .two {
+    width: 850px;  background-color: #fff9dc;
+}
+section.advantages .three {
+    background-color: #feefa9;
+    width: 915px;
+}
+
+
 footer {
     height: 200px;
     margin-top: -200px;

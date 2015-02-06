@@ -1,5 +1,7 @@
+</main>
+</div>
 <footer>
-    <div class="wrapper">
+    <div class="container">
         <nav class="footer">
             <ul>
                 <li><a href="" class="logo"></a></li>
