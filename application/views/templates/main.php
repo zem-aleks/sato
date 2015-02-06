@@ -2,9 +2,9 @@
     <div class="container">
         <div class="heading">SATO ЭТО</div>
         <div class="items">
-            <div class="item-flag">Сделано в традициях <b>японского качества</b></div>
-            <div class="item-star">Расширенная гарантия <b>на 5 лет</b></div>
-            <div class="item-pencil"><b>Современный дизайн и функционал</b></div>
+            <div class="item flag">Сделано в традициях <b>японского качества</b></div>
+            <div class="item star">Расширенная гарантия <b>на 5 лет</b></div>
+            <div class="item pencil"><b>Современный дизайн и функционал</b></div>
         </div>
     </div>
 </section>

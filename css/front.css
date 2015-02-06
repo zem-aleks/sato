@@ -155,16 +155,35 @@ main {
     padding-bottom: 210px;
 }
 section.desk {
-    background: url(/images/.jpg) center center no-repeat #050505;
-    height: 240px;
+    background: url(/images/front/black-layer.jpg) center center no-repeat #050505;
+    padding-bottom: 30px;
     padding-top: 50px;
 }
 section.desk .heading {
     color: #fff;
+    font-size: 36px;
 }
 section.desk .items {
     color: #fff;
     font-size: 20px;
+    margin-top: 28px;
+    text-align: center;
+}
+section.desk .items .flag {
+    background: url(/images/front/flag.png) 52px 14px no-repeat;
+    margin-right: 100px;
+}
+section.desk .items .star {
+    background: url(/images/front/star.png) 62px 0px no-repeat;  
+    margin-right: 114px;
+}
+section.desk .items .pencil {
+    background: url(/images/front/pencil.png) 55px 5px no-repeat;  
+}
+section.desk .items .item {
+    height: 43px;
+    padding-top: 107px;
+    line-height: 23px;
 }
 section.models .heading {
     margin-top: 70px;
