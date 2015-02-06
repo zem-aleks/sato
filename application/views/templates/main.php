@@ -14,21 +14,21 @@
         <div class="products">
             <div class="item">
                 <div class="pic">
-                    <img src="" alt="" />
+                    <img src="/images/front/cover.png" alt="cover" />
                 </div>
                 <div class="model">SATO <span>DB300</span></div>
                 <div class="price">20 900</div>
             </div>
             <div class="item">
                 <div class="pic">
-                    <img src="" alt="" />
+                    <img src="/images/front/cover.png" alt="cover" />
                 </div>
                 <div class="model"><SATO <span>DB400</span></div>
                 <div class="price">30 900</div>
             </div>
             <div class="item">
                 <div class="pic">
-                    <img src="" alt="" />
+                    <img src="/images/front/cover.png" alt="cover" />
                 </div>
                 <div class="model">SATO <span>DB500</span></div>
                 <div class="price">50 900</div>
@@ -43,105 +43,108 @@
             <thead>
                 <tr>
                     <td>РЕЖИМ И ФУНКЦИИ</td>
-                    <td>DB300</td>
-                    <td>DB400</td>
-                    <td>DB500</td>
+                    <td>
+                        <img src="/images/front/cover-sm.png" alt="" /> <span>DB300</span></td>
+                    <td>
+                        <img src="/images/front/cover-sm.png" alt="" /> <span>DB400</span></td>
+                    <td>
+                        <img src="/images/front/cover2.png" alt="" /> <span>DB500</span></td>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td>Обмыв</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td class="check"></td>
+                    <td class="check"></td>
+                    <td class="check"></td>
                 </tr>
                 <tr>
                     <td>Биде</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td class="check"></td>
+                    <td class="check"></td>
+                    <td class="check"></td>
                 </tr>
                 <tr>
                     <td>Клизма</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td class="check"></td>
+                    <td class="check"></td>
+                    <td class="check"></td>
                 </tr>
                 <tr>
                     <td>Сушка</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td class="check"></td>
+                    <td class="check"></td>
+                    <td class="check"></td>
                 </tr>
                 <tr>
                     <td>Режим "Дети"</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td class="check"></td>
+                    <td class="check"></td>
+                    <td class="check"></td>
                 </tr>
                 <tr>
                     <td>Воздушные пузыри в струе воды</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td class="check"></td>
+                    <td class="check"></td>
+                    <td class="check"></td>
                 </tr>
                 <tr>
                     <td>Водяной насос с повышенной производительностью</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td class="check"></td>
+                    <td class="check"></td>
+                    <td class="check"></td>
                 </tr>
                 <tr>
                     <td>Подогрев сиденья</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td class="check"></td>
+                    <td class="check"></td>
+                    <td class="check"></td>
                 </tr>
                 <tr>
                     <td>Плавное опускание крышки и сиденья</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td class="check"></td>
+                    <td class="check"></td>
+                    <td class="check"></td>
                 </tr>
                 <tr>
                     <td>Пульсация, массаж</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td class="check"></td>
+                    <td class="check"></td>
+                    <td class="check"></td>
                 </tr>
                 <tr>
                     <td>Интеллектуальный и автоматический энергосберегающий режим</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td class="check"></td>
+                    <td class="check"></td>
+                    <td class="check"></td>
                 </tr>
                 <tr>
                     <td>Дезодорация</td>
                     <td></td>
-                    <td></td>
-                    <td></td>
+                    <td class="check"></td>
+                    <td class="check"></td>
                 </tr>
                 <tr>
                     <td>Мгновенный нагрев воды</td>
                     <td></td>
-                    <td></td>
-                    <td></td>
+                    <td class="check"></td>
+                    <td class="check"></td>
                 </tr>
                 <tr>
                     <td>Пульт дистанционного управления</td>
                     <td></td>
                     <td></td>
-                    <td></td>
+                    <td class="check"></td>
                 </tr>
                 <tr>
                     <td>Сохранение настроек на несколько пользователей</td>
                     <td></td>
                     <td></td>
-                    <td></td>
+                    <td class="check"></td>
                 </tr>
                 <tr>
                     <td>Отключение датчика присутствия *</td>
-                    <td></td>
+                    <td class="check"></td>
                     <td></td>
                     <td></td>
                 </tr>
@@ -153,19 +156,19 @@
     <div class="container">
         <div class="heading">3 ПРИЧИНЫ <span>ВЫБРАТЬ</span> SATO</div>
         <div class="point one">
-            <div>1</div>
-            <div><b>Низкие цены</b></div>
-            <div>Стоимость нашей продукции ниже, чем у аналогов нарынке</div>
+            <div class="number">1</div>
+            <div class="adv">Низкие цены</div>
+            <div class="details">Стоимость нашей продукции ниже, чем у аналогов на рынке</div>
         </div>
         <div class="point two">
-            <div>2</div>
-            <div><b>Высокое качество</b></div>
-            <div>Вся продукция производится в Японии, что обеспечивает высочайшее качество</div>
+            <div class="number">2</div>
+            <div class="adv">Высокое качество</div>
+            <div class="details">Вся продукция производится в Японии, что обеспечивает высочайшее качество</div>
         </div>
         <div class="point three">
-            <div>3</div>
-            <div><b>Гарантийное обслуживание</b></div>
-            <div>На продукцию предоставляется год гарантии. Мы без проблем заменим бракованный товар</div>
+            <div class="number">3</div>
+            <div class="adv">Гарантийное обслуживание</div>
+            <div class="details">На продукцию предоставляется год гарантии. Мы без проблем заменим бракованный товар</div>
         </div>
     </div>
 </section>

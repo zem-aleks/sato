@@ -1,5 +1,5 @@
 html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,time,mark,audio,video { margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent; } 
-table { border-collapse:collapse;border-spacing:0; }
+table { border-collapse:collapse;border-spacing:0;}
 
 @font-face{font-family: FuturaNewBold;src:url(/fonts/FuturaNewBold.otf);font-weight:normal;font-style:normal;}
 
@@ -35,7 +35,6 @@ body {
     font-size: 18px;
     color: #000;
     margin: 0 0;
-    background-color: pink;
 }
 .main-wrapper {
     min-height: 100%;
@@ -156,7 +155,7 @@ main {
 }
 section.desk {
     background: url(/images/front/black-layer.jpg) center center no-repeat #050505;
-    padding-bottom: 30px;
+    padding-bottom: 27px;
     padding-top: 50px;
 }
 section.desk .heading {
@@ -181,25 +180,22 @@ section.desk .items .pencil {
     background: url(/images/front/pencil.png) 55px 5px no-repeat;  
 }
 section.desk .items .item {
-    height: 43px;
     padding-top: 107px;
     line-height: 23px;
+    width: 220px;
 }
 section.models .heading {
-    margin-top: 70px;
-    margin-bottom: 60px;
+    padding-top: 70px;
+    padding-bottom: 50px;
 }
 section.models .products {
-    height: 480px;
-    width: 830px;
-    margin: 0 auto;
-    text-align: center;
+    padding-left: 68px;
 }
-section .item {
-    width: 220px;
+.item {
+    width: 200px;
     display: inline-block;
     vertical-align: top;
-    margin-right: 120px;
+    margin-right: 108px;
 }
 section .item:last-child {
     margin-right: 0px;
@@ -210,47 +206,90 @@ section.models .products .item {
     text-align: left;
 }
 section.models .products .item .pic {
-    max-height: 240px;
-    max-width: 220px;
+    height: 240px;
+    width: 200px;
     overflow: hidden;
+    margin-bottom: 24px;
 }
 section.models .products .item span {
     font-family: 'Roboto Light'
 }
 section.models .products .item .price {
     color: #ff585d;
+    margin-top: 4px;
+    padding-left: 20px;
+}
+section.models .products .item .model {
+    padding-left: 20px;
 }
 section.compare .heading {
-    margin-top: 90px;
-    margin-bottom: 80px;
+    padding-top: 90px;
+    padding-bottom: 35px;
+}
+section.compare table.comparison {
+    width: 100%;
+    text-align: center;
+    background-color: #f6f6f6;
+    margin-bottom: 106px;
 }
 section.compare table thead {
     font-weight: bold;
 }
+section.compare table thead tr td span {
+    vertical-align: middle;
+}
+section.compare table thead tr td img {
+    vertical-align: middle;
+}
+section.compare table thead tr {
+    height: 105px;
+}
+section.compare table thead tr td {
+    padding-top: 36px;
+    vertical-align: middle;
+    text-align: left;
+}
 section.compare table tr td:first-child {
-    width: 320px;
+    width: 322px;
+    text-align: left;
+    padding-left: 44px;
 }
-section.compare table tr td {
-    width: 190px;
-    border: 1px solid;
+section.compare table tbody tr td {
+    padding-bottom: 30px;
+    vertical-align: top;
 }
-section.compare table tr {
-    height: 50px;
+section.compare table tbody tr td.check {
+    background: url(/images/front/check.png) 24px 0px no-repeat;
 }
 section.advantages {
     background-color: yellow;
-    padding: 60px 0;
+    padding: 55px 0 68px;
 }
 section.advantages .heading span {
     font-family: 'Roboto Light'
 }
 section.advantages .point {
-    padding: 25px 0 25px 100px;
+    margin-left: 18px;
+    position: relative;
+    padding-left: 95px;
+    height: 86px;
+}
+section.advantages .number {
+    color: #fff;
+    border: 3px solid;
+    border-radius: 50%;
+    text-align: center;
+    width: 44px;
+    height: 44px;
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 22px;
 }
 section.advantages .one {
     width: 740px;
     background-color: #fff;
-    margin-top: 32px;
+    margin-top: 30px;
 }
 section.advantages .two {
     width: 850px;  background-color: #fff9dc;
@@ -259,8 +298,27 @@ section.advantages .three {
     background-color: #feefa9;
     width: 915px;
 }
-
-
+section.advantages .point .adv {
+    font-size: 24px;
+    font-weight: bold;
+    padding-top: 25px;
+}
+section.about {
+    padding-top: 66px;
+}
+section.about .heading {
+    text-align: left;
+    margin-left: 22px;
+    padding-bottom: 30px;
+}
+section.about .text {
+    width: 700px;
+    margin-left: 22px;
+}
+section.about .text p {
+    line-height: 21px;
+    margin-bottom: 23px;
+}
 footer {
     height: 200px;
     margin-top: -200px;
