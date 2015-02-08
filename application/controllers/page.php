@@ -39,6 +39,7 @@ class Page extends Controller {
             $content['breadcrumbs'][] = array('url' => '/page/' . $chpu, 'name' => $content['view']['name']);
             $content['settings'] = $this->load->module('settings')->getListSettings();
             $this->load->view('templates/header', $content);
+            $this->load->view('templates/breadcrumbs', $content);
             if ($content['view']['chpu'] == 'contacts') {
                 $this->load->view('templates/contacts', $content);
             } elseif($content['view']['chpu'] == 'register') {

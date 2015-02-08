@@ -37,6 +37,14 @@ body {
     margin: 0 0;
     min-width: 960px;
 }
+::-webkit-input-placeholder { color: #000; }
+.breadcrumbs {
+    width: 960px;
+    margin: 0 auto;
+    text-align: left;
+    margin-top: 48px;
+    text-decoration: underline;
+}
 .main-wrapper {
     min-height: 100%;
 }
@@ -106,6 +114,7 @@ header .top-line .cart {
     border: 1px dashed #f26c71;
     width: 163px;
     height: 36px;
+    text-align: left;
     line-height: 34px;
     margin-right: 0px;
     margin-left: 8px;
@@ -359,6 +368,79 @@ section.about .text p {
 .more {
     color: #2cc1ea;
 }
+.contact-page .contacts {
+    display: inline-block;
+    vertical-align: top;
+    width: 455px;
+}
+.contact-page .write {
+    display: inline-block;  
+    vertical-align: top;  
+    width: 450px;
+}
+.contact-page h1 {
+    font-family: 'Roboto Light';
+    font-size: 48px;
+    margin-bottom: 34px;
+}
+.contact-page .contacts .phone .number {
+    font-size: 43px;
+    font-weight: bold;
+}
+.contact-page .contacts .phone span {
+    font-size: 14px;
+}
+.contact-page .contacts .phone {
+    margin-bottom: 40px;
+}
+.contact-page .contacts p {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.contact-page .contacts p a {
+    color: #1ec2eb;
+    font-weight: normal;
+    text-decoration: underline;
+}
+.contact-page .contacts p span {
+    font-size: 14px;
+}
+.contact-page .contacts p .small {
+    font-size: 14px;
+    font-weight: normal;
+}
+.contact-page .contacts p.address {
+    margin-top: 35px;
+}
+.contact-page .write .text {
+    width: 352px;
+    margin-bottom: 20px;
+    border: 1px solid #eaeff0;
+    padding-top: 12px;
+    padding-bottom: 13px;
+    padding-left: 15px;
+    font-size: 18px;
+    outline: none;
+    border-radius: 2px;
+}
+.contact-page .write textarea.text {
+    height: 128px;
+    border-radius: 2px;
+    resize: none;
+    margin-bottom: 25px;
+}
+.contact-page .write .contact-submit {
+    width: 371px;
+    background-color: #909ea9;
+    border: none;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 22px;
+    font-weight: bold;
+    outline: none;
+    padding: 10px 0px;
+}
 footer {
     height: 200px;
     margin-top: -200px;
@@ -425,4 +507,22 @@ footer .btm-line .copyright b {
 }
 footer .btm-line .copyright .about {
     margin-top: -7px;
+}
+.alert-danger {
+color: #a94442;
+background-color: #f2dede;
+border-color: #ebccd1;
+}
+.alert {
+padding: 15px;
+margin-bottom: 20px;
+border: 1px solid transparent;
+border-radius: 4px;
+box-sizing: border-box;
+line-height: 1.2em;
+}
+.alert-success {
+color: #3c763d;
+background-color: #dff0d8;
+border-color: #d6e9c6;
 }
