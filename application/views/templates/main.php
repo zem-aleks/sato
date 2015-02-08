@@ -12,27 +12,27 @@
     <div class="container">
         <div class="heading">МОДЕЛИ</div>
         <div class="products">
-            <div class="item">
+            <a href="" class="item">
                 <div class="pic">
                     <img src="/images/front/cover.png" alt="cover" />
                 </div>
                 <div class="model">SATO <span>DB300</span></div>
                 <div class="price">20 900</div>
-            </div>
-            <div class="item">
+            </a>
+            <a href="" class="item">
                 <div class="pic">
                     <img src="/images/front/cover.png" alt="cover" />
                 </div>
                 <div class="model"><SATO <span>DB400</span></div>
                 <div class="price">30 900</div>
-            </div>
-            <div class="item">
+            </a>
+            <a href="" class="item">
                 <div class="pic">
                     <img src="/images/front/cover.png" alt="cover" />
                 </div>
                 <div class="model">SATO <span>DB500</span></div>
                 <div class="price">50 900</div>
-            </div>
+            </a>
         </div>
     </div>
 </section>
