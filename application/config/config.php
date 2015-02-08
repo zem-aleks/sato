@@ -11,7 +11,7 @@
 |	http://example.com/
 |
 */
-$config['base_url']	= "http://mega-auto.dev";
+$config['base_url']	= "http://sato.dev";
 
 /*
 |--------------------------------------------------------------------------
