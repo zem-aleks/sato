@@ -45,16 +45,30 @@ body {
     font-size: 30px;
     text-align: center;
 }
+a.up {
+    font-size: 24px;
+    width: 95px;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    padding-right: 54px;
+    padding-left: 5px;
+    background: url(/images/front/arrow-up.png) 105px 13px no-repeat;
+    position: absolute;
+    right: 283px;
+    bottom: 85px;
+    box-shadow: 5px 9px 40px #e8e8e8;
+}
+.container {
+    margin: 0 auto;
+    width: 960px;
+}
 header {
     background-color: #e6252e;
     height: 150px;
     width: 100%;
     color: #fff;
     overflow: hidden;
-}
-.container {
-    margin: 0 auto;
-    width: 960px;
 }
 header .btm-line .logo-main {
     display: inline-block;
@@ -74,6 +88,7 @@ header .btm-line .logo-main {
 header .top-line {
     height: 40px;
     margin-top: 22px;
+    text-align: right;
 }
 header .top-line > div {
     display: inline-block;
@@ -240,8 +255,9 @@ section.compare table thead {
 section.compare table thead tr td span {
     vertical-align: middle;
 }
-section.compare table thead tr td img {
-    vertical-align: middle;
+.icon img {
+    max-width: 100%;
+    max-height: 100%;
 }
 section.compare table thead tr {
     height: 105px;
@@ -263,8 +279,18 @@ section.compare table tbody tr td {
 section.compare table tbody tr td.check {
     background: url(/images/front/check.png) 24px 0px no-repeat;
 }
+.comparison .icon {
+    width: 70px;
+    display: inline-block;
+    height: 70px;
+    background: #fff;
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: middle;
+    overflow: hidden;
+}
 section.advantages {
-    background-color: yellow;
+    background: url(/images/front/pattern.jpg) #fddf52;
     padding: 55px 0 68px;
 }
 section.advantages .heading span {
@@ -282,12 +308,13 @@ section.advantages .number {
     border-radius: 50%;
     text-align: center;
     width: 44px;
-    height: 31px;
-    padding-top: 13px;
+    height: 34px;
+    padding-top: 10px;
     display: block;
     position: absolute;
     top: 20px;
     left: 22px;
+    font-size: 25px;
 }
 section.advantages .one {
     width: 643px;
@@ -298,7 +325,7 @@ section.advantages .two {
     width: 753px;  background-color: #fff9dc;
 }
 section.advantages .three {
-    background-color: #feefa9;
+    background-color: rgba(254, 239, 169, 0.6);
     width: 818px;
 }
 section.advantages .point .adv {
@@ -308,6 +335,8 @@ section.advantages .point .adv {
 }
 section.about {
     padding-top: 66px;
+    padding-bottom: 95px;
+    position: relative;
 }
 section.about .heading {
     text-align: left;
@@ -321,6 +350,14 @@ section.about .text {
 section.about .text p {
     line-height: 21px;
     margin-bottom: 23px;
+}
+.more span {
+    display: inline-block;
+    color: #2cc1ea;
+    border-bottom: 1px dotted #2cc1ea;
+}
+.more {
+    color: #2cc1ea;
 }
 footer {
     height: 200px;
@@ -347,6 +384,7 @@ footer nav ul li a {
     display: block;  
     margin-right: 25px;
     line-height: 25px;
+    text-transform: uppercase;
 }
 footer nav ul li .logo {
     width: 100px;
@@ -363,14 +401,16 @@ footer .btm-line {
 footer .btm-line .details {
     display: inline-block;
     vertical-align: top;
-    width: 106px;
+    width: 125px;
     height: 50px;
-    padding: 14px 20px 0px 119px;
+    padding-left: 135px;
+    padding-top: 14px;
     margin-right: 33px;
-    margin-left: 38px;
+    margin-left: 22px;
     font-size: 16px;
     line-height: 18px;
-    background: url(/images/front/logo-details.jpg) 2px 18px no-repeat #fff;
+    background: url(/images/front/logo-details.jpg) 17px 18px no-repeat #fff;
+    box-shadow: 7px 14px 26px #ededed;
 }
 footer .btm-line .copyright {
     display: inline-block;
