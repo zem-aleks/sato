@@ -150,9 +150,11 @@ class ModuleModel extends Model {
     
     function removeImage($name)
     {
-        $path = $_SERVER['DOCUMENT_ROOT'] . '/uploads/' . $this->config['upload_folder'] . '/';
+        $path = $_SERVER['DOCUMENT_ROOT'] . '/uploads/' . $this->config['upload_folder'] . '/original/';
+        $path2 = $_SERVER['DOCUMENT_ROOT'] . '/uploads/' . $this->config['upload_folder'] . '/thumb/';
         if(!empty($name) && is_file($path . $name)) {
             unlink($path . $name);
+            unlink($path2 . $name);
         }
     }
 
