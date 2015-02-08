@@ -4,14 +4,10 @@
     <div class="container">
         <nav class="footer">
             <ul>
-                <li><a href="" class="logo"></a></li>
-                <li><a href="">ПРОДУКЦИЯ</a></li>
-                <li><a href="">О БРЕНДЕ</a></li>
-                <li><a href="">ВОПРОС-ОТВЕТ</a></li>
-                <li><a href="">ДОСТАВКА И ОПЛАТА</a></li>
-                <li><a href="">НОВОСТИ</a></li>
-                <li><a href="">СТАТЬИ</a></li>
-                <li><a href="">КОНТАКТЫ</a></li>
+                <li><a href="/" class="logo"></a></li>
+                <? foreach($menu as $item): ?>
+                    <li><a href="<?= $item['url']; ?>" class="<?= ($item['chpu'] == $page) ? 'active' : '' ?>"><?= $item['cat_name']; ?></a></li>
+                <? endforeach; ?>
             </ul>
         </nav>
         <div class="btm-line">

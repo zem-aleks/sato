@@ -43,7 +43,7 @@
                         <div class="btm-line">
                             <a href="/" class="logo-main">ЖИВИ С КОМФОРТОМ</a>
                             <div class="slogan">Официальный интернет-магазин умной сантехники SATO</div>
-                            <div class="phone">(495) <span>777 75 77</span></div>
+                            <div class="phone"><?=$settings['phone']; ?></div>
                         </div>
                     </div>
                 </header>
