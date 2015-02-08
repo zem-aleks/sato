@@ -9,7 +9,7 @@
 | For more info visit:  http://www.php.net/error_reporting
 |
 */
-if ($_SERVER['SERVER_NAME'] == 'interactis.') {
+if ($_SERVER['SERVER_NAME'] == 'sato.dev1') {
     define('ENVIRONMENT', 'development');
 } else {
     define('ENVIRONMENT', 'production');
