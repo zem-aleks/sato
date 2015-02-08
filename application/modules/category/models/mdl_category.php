@@ -173,7 +173,7 @@ class Mdl_category extends Model {
 
     function edit($id) {
         $data = array();
-        $data['title'] = $this->input->post('title');
+        $data['cat_name'] = $this->input->post('name');
         $data['url'] = $this->input->post('url');
         /*$data['mkeys'] = $this->input->post('mkeys');
         $data['mdesc'] = $this->input->post('mdesc');
