@@ -622,18 +622,16 @@ footer .btm-line .copyright .about {
 }
 .pagination {
     font-size: 18px;
-    padding-top: 13px;
-    margin-left: 27px;
+    padding-top: 55px;
     font-size: 0px;
-    margin-bottom: 62px;
+    margin-bottom: 115px;
     display: block;
 }
 .pagination a, .pagination strong {
     display: inline-block;
-    padding: 8px 14px;
+    padding: 9px 14px;
     font-size: 22px;
-    font-weight: normal;
-    text-decoration: underline;
+    font-weight: bold;
 }
 .pagination strong {
     text-decoration: none;
@@ -652,5 +650,6 @@ background-image: -ms-linear-gradient(bottom, #FCD45B 10%, #FFE186 100%);
 background-image: linear-gradient(to bottom, #FCD45B 10%, #FFE186 100%);
 -webkit-border-radius: 8px;
 -moz-border-radius: 8px;
-border-radius: 8px;
+
+    border-radius: 2px;
 }
