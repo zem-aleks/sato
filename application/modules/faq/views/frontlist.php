@@ -1,19 +1,15 @@
-<div class="faq-page">
-    <div class="container">
-        <div class="row">
-            <? foreach($entries as $entry): ?>
-            <a href="/faq/view/<?=$entry['chpu'];?>" class="col-xs-4">
-                <div>
-                    <h4><?=$entry['name'];?></h4>
-                    <div class="answer">
-                        <div>Ответ</div>
-                        <?=$entry['answer'];?>
-                    </div>
-                </div>
-            </a>
-            <? endforeach;?>
+<h1 class="title container"><?=$title;?></h1>
+<div class="container front-list">
+    <? foreach ($entries as $entry): ?>
+    <div class="media">
+        <a class="pull-left" href="/<?=$uri;?>/view/<?= $entry['chpu']; ?>" style="background-image: url(/uploads/<?=$uri;?>/thumb/<?= $entry['image']; ?>);"></a>
+        <div class="media-body">
+            <div class="date"><?= $entry['date']; ?></div>
+            <a href="/<?= $uri; ?>/view/<?= $entry['chpu']; ?>" class="media-heading"><?= $entry['name']; ?></a>
+            <?= $entry['short']; ?>
         </div>
-        
-        <div class="pagination"><?=$paginator; ?></div>
     </div>
+    <? endforeach; ?>
+    
+    <div class="pagination"><?=$paginator; ?></div>
 </div>

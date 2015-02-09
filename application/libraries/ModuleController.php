@@ -57,6 +57,7 @@ class ModuleController extends Controller{
         $content['title'] = $content['view']['title'];
         $content['description'] = $content['view']['mdesc'];
         $content['keywords'] = $content['view']['mkeys'];
+        $content['uri'] = $this->config['uri'];
         $content = $this->modifyViewContent($content);
         
         $this->load->view('templates/header', $content);

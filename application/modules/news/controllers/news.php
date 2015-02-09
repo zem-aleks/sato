@@ -37,7 +37,6 @@ class News extends ModuleController {
             
         if(count($content['last']) > 3)
             unset($content['last'][rand(0, 3)]);
-           
         return $content;
     }
 }

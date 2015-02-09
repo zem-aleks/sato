@@ -16,27 +16,29 @@ class Articles extends ModuleController {
         'media_fields' => array('image', 'thumb'),
     );
     public static $md = 'mdl_articles';
-    
-    public function __construct() {
+
+    public function __construct()
+    {
         parent::__construct(self::$config, self::$md);
     }
-    
+
     public function modifyEntry($entry)
     {
         $entry['date'] = modifyDate($entry['date']);
         return $entry;
     }
-    
+
     public function modifyViewContent($content)
     {
         $content['last'] = $this->getEntries(0, 4, 1);
         foreach ($content['last'] as $key => $entry)
-            if($entry['ID'] == $content['view']['ID'])
+            if ($entry['ID'] == $content['view']['ID'])
                 unset($content['last'][$key]);
-            
-        if(count($content['last']) > 3)
+
+        if (count($content['last']) > 3)
             unset($content['last'][rand(0, 3)]);
-           
+
         return $content;
     }
+
 }

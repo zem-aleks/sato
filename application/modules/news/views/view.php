@@ -4,7 +4,7 @@
         <div class="text">
             <div class="date"><?= $view['date']; ?></div>
             <? if ($view['image'] != 'no_image.jpg'): ?>
-                <img src="/uploads/articles/original/<?= $view['image']; ?>" alt="<?= $view['name']; ?>" title="<?= $view['name']; ?>" />
+                <img src="/uploads/<?= $uri; ?>/original/<?= $view['image']; ?>" alt="<?= $view['name']; ?>" title="<?= $view['name']; ?>" />
             <? endif; ?>
             <?= $view['content']; ?>
         </div>
