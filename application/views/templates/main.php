@@ -179,6 +179,6 @@
             <?=$about['short'];?>
             <a href="/page/about" class="more"><span>еще о бренде</span> &darr;</a>
         </div>
-        <a href="" class="up">Наверх</a>
+        <a href="#" class="up">Наверх</a>
     </div>
 </section>

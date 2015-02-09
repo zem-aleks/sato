@@ -6,8 +6,11 @@
         <div class="name"><?=$dictionary['name'];?></div>
         <div class="complete">
             <? foreach ($dictionary['dictionary'] as $value):?>
-                <div data-id="<?=$value['ID'];?>" class="dict-item" <? if($key == 'color'): ?>style="background-color: <?=$value['content'];?>"<? endif;?>>
-                    <span class="dname"><?=$value['name'];?></span><? if(!empty($value['content'])):?> - <span class="description"><?=$value['content'];?></span> <? endif;?>
+                <div data-id="<?=$value['ID'];?>" class="dict-item">
+                    <span class="dname"><?=$value['name'];?></span>
+                    <? if(!empty($value['content'])):?>
+                    - <span class="description"><?=$value['content'];?></span> 
+                    <? endif;?>
                 </div>
             <? endforeach;?>
             <div class="clear"></div>

@@ -25,21 +25,21 @@ class Dictionary extends Controller {
         $content = array();
         $content['title'] = 'Допольнительные материалы по товарам';
         $content['types'] = array(
-            'color' => array(
-                'name' => 'Цвета товаров',
-                'placeholder' => '#FFFFFF',
-                'dictionary' => $this->{$this->md}->getDictionary('color')
+            'categories' => array(
+                'name' => 'Категории товаров',
+                'placeholder' => 'Описание категории (not required)',
+                'dictionary' => $this->{$this->md}->getDictionary('category')
             ),
-            'brand' => array(
-                'name' => 'Бренды/Фирмы',
-                'placeholder' => 'Описание бренда',
-                'dictionary' => $this->{$this->md}->getDictionary('brand')
+            'sizes' => array(
+                'name' => 'Размеры',
+                'placeholder' => 'Описание размера (not required)',
+                'dictionary' => $this->{$this->md}->getDictionary('sizes')
             ),
-            'material' => array(
-                'name' => 'Материалы из которых делают товары',
-                'placeholder' => 'Описание  материала',
-                'dictionary' => $this->{$this->md}->getDictionary('material')
-            )
+            'brands' => array(
+                'name' => 'Бренды',
+                'placeholder' => 'Описание бренда (not required)',
+                'dictionary' => $this->{$this->md}->getDictionary('brands')
+            ),
         );
 
         $this->load->view('includes/admin_header', $content);
@@ -74,7 +74,6 @@ class Dictionary extends Controller {
             $this->db->update('item_options', $data);
             echo 1;
         }
-        
     }
     
     function del($id)
