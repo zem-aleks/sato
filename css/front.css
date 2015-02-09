@@ -592,3 +592,65 @@ footer .btm-line .copyright .about {
 .media-body .media-heading:hover {
     color: #25bbe6;
 }
+.view .contain {
+    width: 700px;
+    overflow: hidden;
+}
+.view .text img {
+    max-width: 100%;
+    max-height: 600px;
+    margin-top: 33px;
+    margin-bottom: 34px;
+}
+.view .date {
+    color: #d3d8d9;
+    font-size: 14px;
+}
+.view .text h3 {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.view h1 {
+    line-height: 45px;
+    margin-bottom: 28px;
+}
+.view .text p {
+    line-height: 18px;
+    font-size: 16px;
+    margin-bottom: 22px;
+}
+.pagination {
+    font-size: 18px;
+    padding-top: 13px;
+    margin-left: 27px;
+    font-size: 0px;
+    margin-bottom: 62px;
+    display: block;
+}
+.pagination a, .pagination strong {
+    display: inline-block;
+    padding: 8px 14px;
+    font-size: 22px;
+    font-weight: normal;
+    text-decoration: underline;
+}
+.pagination strong {
+    text-decoration: none;
+    background-color: #FCD45B;
+    background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0.1, #FCD45B),
+    color-stop(1, #FFE186)
+);
+background-image: -o-linear-gradient(bottom, #FCD45B 10%, #FFE186 100%);
+background-image: -moz-linear-gradient(bottom, #FCD45B 10%, #FFE186 100%);
+background-image: -webkit-linear-gradient(bottom, #FCD45B 10%, #FFE186 100%);
+background-image: -ms-linear-gradient(bottom, #FCD45B 10%, #FFE186 100%);
+background-image: linear-gradient(to bottom, #FCD45B 10%, #FFE186 100%);
+-webkit-border-radius: 8px;
+-moz-border-radius: 8px;
+border-radius: 8px;
+}
