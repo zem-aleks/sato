@@ -8,5 +8,20 @@
             <? endif; ?>
             <?= $view['content']; ?>
         </div>
+        <div class="read-news">
+            <h1>Читайте так же</h1>
+            <div class="articles">
+                <? foreach($last as $entry): ?>
+                <div class="article">
+                    <a href="" class="img" style="background-image: url(/uploads/<?=$uri;?>/original/<?= $entry['image']; ?>)"></a>
+                    <div class="text-data">
+                        <a href="/<?=$uri;?>/view/<?= $entry['chpu']; ?>" class="title"><?=$entry['name']; ?></a>
+                        <div><?=$entry['short']; ?></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <? endforeach; ?>
+            </div>
+        </div>
     </div>
 </div>
