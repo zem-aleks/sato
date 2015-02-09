@@ -2,11 +2,10 @@
     <div class="contain">
         <h1><?= $view['name']; ?></h1>
         <div class="text">
-            <div class="date">21 МАРТА</div>
+            <div class="date"><?= $view['date']; ?></div>
             <? if ($view['image'] != 'no_image.jpg'): ?>
-                <img src="/uploads/articles/original/<?= $view['image']; ?>" alt="<?= $view['name']; ?>" title="<?= $view['name']; ?>" />
+                <img src="/uploads/<?=$uri;?>/original/<?= $view['image']; ?>" alt="<?= $view['name']; ?>" title="<?= $view['name']; ?>" />
             <? endif; ?>
-                <h3>Универсальный теплообменник</h3>
             <?= $view['content']; ?>
         </div>
         <div class="read-news">

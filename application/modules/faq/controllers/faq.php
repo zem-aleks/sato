@@ -4,7 +4,7 @@ if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
 class Faq extends ModuleController {
-    
+
     public static $config = array(
         'name' => 'faq',
         'title' => 'Вопрос-ответ',
@@ -12,33 +12,33 @@ class Faq extends ModuleController {
         'upload_folder' => 'faq',
         'tb' => 'faq',
         'perPage' => 9,
-        'mainPage' => 'faq'
+        'mainPage' => 'faq',
+        'media_fields' => array('image', 'thumb'),
     );
     public static $md = 'mdl_faq';
-    
-    
-    public function __construct() {
+
+    public function __construct()
+    {
         parent::__construct(self::$config, self::$md);
     }
-    
-    public function getSlider($count)
+
+    public function modifyEntry($entry)
     {
-        $content = array();
-        $content['entries'] = $this->getEntries(0, $count, 1);
-        foreach($content['entries'] as &$entry) {
-            $entry['answer'] = word_limiter($entry['answer'], 24);
-        }
-        return $this->load->view('slider', $content, TRUE);
+        $entry['date'] = modifyDate($entry['date']);
+        return $entry;
     }
-    
-    public function modifyIndexContent($content) {
-        $this->load->helper('text');
-        foreach($content['entries'] as &$entry) {
-            $entry['answer'] = word_limiter($entry['answer'], 24);
-        }
+
+    public function modifyViewContent($content)
+    {
+        $content['last'] = $this->getEntries(0, 4, 1);
+        foreach ($content['last'] as $key => $entry)
+            if ($entry['ID'] == $content['view']['ID'])
+                unset($content['last'][$key]);
+
+        if (count($content['last']) > 3)
+            unset($content['last'][rand(0, 3)]);
+
         return $content;
     }
-    
-    
-    
+
 }
