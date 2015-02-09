@@ -67,6 +67,7 @@ class Mdl_pages extends Model {
     function add() {
         $data = array();
         $data['name'] = $this->input->post('name');
+        $data['short'] = $this->input->post('short');
         $data['content'] = $this->input->post('content');
         $data['title'] = $this->input->post('title');
         $data['mkeys'] = $this->input->post('mkeys');
@@ -90,6 +91,7 @@ class Mdl_pages extends Model {
         $data['name'] = $this->input->post('name');
         if(empty($data['name']))
             unset($data['name']);
+        $data['short'] = $this->input->post('short');
         $data['content'] = $this->input->post('content');
         $data['title'] = $this->input->post('title');
         $data['mkeys'] = $this->input->post('mkeys');

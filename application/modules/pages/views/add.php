@@ -1,4 +1,5 @@
 <?=show_editor('#content')?>
+<?=show_editor('#short')?>
 <div class="title"><?=$title;?></div>
 <?=form_open_multipart('dashboard/pages/add',array('name'=>'editform'));?> 
 <table border="0" cellpadding="5" cellspacing="5">
@@ -14,6 +15,12 @@
 			<?=form_dropdown('cat',$categories)?>
 		</td>
 	</tr>
+        <tr height="45">
+		<td class="theadl">
+			Краткое содержание:<br/>
+			<textarea id="short" name="short"  value="" ></textarea>		
+		</td>
+	</tr>	
 	<tr height="45">
 		<td class="theadl">
 			Содержание:<br/>

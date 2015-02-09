@@ -1,4 +1,5 @@
 <?=show_editor('#content')?>
+<?=show_editor('#short')?>
 <div class="title"><?= $title; ?></div>
 <?= form_open_multipart('dashboard/pages/edit/' . $page_info['ID'], array('name' => 'editform')); ?> 
 
@@ -10,7 +11,13 @@
                 Название:<br/>
                 <input id="name" name="name" size="80" value="<?= set_value('name', $page_info['name']) ?>" maxlength="255" type="text">	
             </td>
-        </tr>	
+        </tr>
+        <tr height="45">
+		<td class="theadl">
+			Краткое содержание:<br/>
+			<textarea id="short" name="short"  value="" ><?= set_value('short', $page_info['short']) ?></textarea>		
+		</td>
+	</tr>
         <tr height="45">
             <td class="theadl">
                 Содержание:<br/>

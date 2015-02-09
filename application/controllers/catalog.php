@@ -16,6 +16,7 @@ class Catalog extends Controller {
     {
         $this->load->helper('text');
         $content = $this->load->module('template')->loadDefaultData();
+        $content['about'] = $this->load->module('pages')->getPageCHPU('about');
         $content['page'] = 'catalog';
         $content['info'] = $this->load->module('pages')->getPageCHPU('catalog');
         $content['title'] = $content['info']['title'];

@@ -18,8 +18,8 @@ class Main extends Controller {
     {
         $this->load->helper('text');
         $content = $this->load->module('template')->loadDefaultData();
-        $content['short_about'] = $this->load->module('pages')->getPageCHPU('about');
-        $content['short_about']['short'] = word_limiter($content['short_about']['content'], 100);
+        $content['about'] = $this->load->module('pages')->getPageCHPU('about');
+        //$content['short_about']['short'] = word_limiter($content['short_about']['content'], 100);
         //$content['articles'] = $this->load->module('articles')->getVerticalLastArticles('column3 second');
         //$content['news'] = $this->load->module('news')->getVerticalLastArticles('column3 third');
         //$content['works'] = $this->load->module('portfolio')->getSlider(3, "Наши работы");
