@@ -11,7 +11,7 @@ class News extends ModuleController {
         'uri' => 'news',
         'upload_folder' => 'news',
         'tb' => 'news',
-        'perPage' => 10,
+        'perPage' => 1,
         'mainPage' => 'news',
         'media_fields' => array('image', 'thumb'),
     );
@@ -20,6 +20,12 @@ class News extends ModuleController {
     public function __construct()
     {
         parent::__construct(self::$config, self::$md);
+    }
+    
+    public function modifyEntry($entry)
+    {
+        $entry['date'] = modifyDate($entry['date']);
+        return $entry;
     }
 
     /*
