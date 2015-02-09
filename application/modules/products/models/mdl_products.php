@@ -41,6 +41,9 @@ class Mdl_products extends ModuleModel {
     {
         $data = array();
         $data['name'] = $this->input->post('name');
+        $data['price'] = $this->input->post('price');
+        $data['id_category'] = $this->input->post('id_category');
+        $data['id_brand'] = $this->input->post('id_brand');
         $data['short'] = $this->input->post('short');
         $data['content'] = $this->input->post('content');
         $data['date'] = date('Y-m-d H:i:s');
@@ -48,16 +51,22 @@ class Mdl_products extends ModuleModel {
         $data['mkeys'] = $this->input->post('mkeys');
         $data['mdesc'] = $this->input->post('mdesc');
         $data['chpu'] = $this->input->post('chpu');
+        $data['sort'] = $this->getSort();
         if (empty($data['chpu']))
             $data['chpu'] = $this->checkChpu(rus2translit($data['name']));
         
-        $result = uploadImage($_SERVER['DOCUMENT_ROOT'] . '/uploads/articles/', 'userfile');
-        $img = $result['img'];
-        if ($result['status'] == 1)
-            $data['image'] = $img['file_name'];
-        $data['sort'] = $this->getSort();
-        
         $id = $this->db->insert($this->tb, $data);
+        
+        foreach ($_FILES as $key => $file) {
+            $result = uploadImage($_SERVER['DOCUMENT_ROOT'] . '/uploads/products/', $key);
+            if($result['status'] == 1) {
+                $this->db->insert('images', array(
+                    'id_item' => $id,
+                    'image' => $result['img']['file_name']
+                ));
+            }
+        }
+        
         return $id;
     }
 
@@ -66,6 +75,9 @@ class Mdl_products extends ModuleModel {
         $entry = $this->getEntryById($id);
         $data = array();
         $data['name'] = $this->input->post('name');
+        $data['price'] = $this->input->post('price');
+        $data['id_category'] = $this->input->post('id_category');
+        $data['id_brand'] = $this->input->post('id_brand');
         $data['short'] = $this->input->post('short');
         $data['content'] = $this->input->post('content');
         $data['title'] = $this->input->post('title');
@@ -79,7 +91,7 @@ class Mdl_products extends ModuleModel {
             $this->removeImage($entry['image']);
             $data['image'] = "";
         } elseif(empty($_POST['image'])) {
-            $result = uploadImage($_SERVER['DOCUMENT_ROOT'] . '/uploads/articles/', 'userfile');
+            $result = uploadImage($_SERVER['DOCUMENT_ROOT'] . '/uploads/products/', 'userfile');
             $img = $result['img'];
             if ($result['status'] == 1)
                 $data['image'] = $img['file_name'];
@@ -87,6 +99,37 @@ class Mdl_products extends ModuleModel {
         
         $this->db->where('ID', $id);
         $this->db->update($this->tb, $data);
+        
+        foreach ($_FILES as $key => $file) {
+            $result = uploadImage($_SERVER['DOCUMENT_ROOT'] . '/uploads/products/', $key);
+            if($result['status'] == 1) {
+                $this->db->insert('images', array(
+                    'id_item' => $id,
+                    'image' => $result['img']['file_name']
+                ));
+            }
+        }
+    
+        $path = $_SERVER['DOCUMENT_ROOT'] . '/uploads/products/';
+        if(isset($_POST['delImage']))
+            foreach ($_POST['delImage'] as $key => $value) 
+            {
+                $where = array(
+                    'id_item' => $id,
+                    'ID' => $key
+                );
+                $this->db->where($where);
+                $this->db->limit(1);
+                $query = $this->db->get('images');
+                $image = $query->row_array();
+                if(file_exists($path . 'original/' . $image['image']))
+                    unlink ($path . 'original/' . $image['image']);
+                if(file_exists($path . 'thumb/' . $image['image']))
+                    unlink ($path . 'thumb/' . $image['image']);
+                $this->db->where($where);
+                $this->db->delete('images');
+            }
+        
         return $id;
     }
 

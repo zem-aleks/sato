@@ -27,6 +27,26 @@ class Products extends ModuleController {
         $entry['date'] = modifyDate($entry['date']);
         return $entry;
     }
+    
+    public function modifyAdminAddContent($content)
+    {
+        $this->load->model('dictionary/mdl_dictionary');
+        $content['brands'] = $this->mdl_dictionary->getDictionary('brands');
+        $content['categories'] = $this->mdl_dictionary->getDictionary('categories');
+        return $content;
+    }
+    
+    public function modifyAdminEditContent($content)
+    {
+        $this->load->model('dictionary/mdl_dictionary');
+        $content['brands'] = $this->mdl_dictionary->getDictionary('brands');
+        $content['categories'] = $this->mdl_dictionary->getDictionary('categories');
+        $this->db->where('id_item', $content['page']['ID']);
+        $this->db->order_by('ID ASC');
+        $query = $this->db->get('images');
+        $content['page']['images'] = $query->result_array();
+        return $content;
+    }
 
 
 }

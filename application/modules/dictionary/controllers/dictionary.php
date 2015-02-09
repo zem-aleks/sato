@@ -74,7 +74,6 @@ class Dictionary extends Controller {
             $this->db->update('item_options', $data);
             echo 1;
         }
-        
     }
     
     function del($id)

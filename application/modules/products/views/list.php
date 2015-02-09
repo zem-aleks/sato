@@ -6,12 +6,9 @@
         <? foreach ($pages as $page): $key++ ?>
             <tr <? if ($key % 2 == 0) echo "class='gray'"; ?> id="<?= $page['ID'] ?>" >
                 <td class="drag" align="left"><?= $key ?></td>
-                <td class="image" align="center">
-                    <? if(empty($page['image']))
-                        $page['image']='no_image.jpg'?>
-                    <img width="80" src="/uploads/<?=$uri;?>/thumb/<?=$page['image']?>" alt="<?=$page['image']?>" title="<?=$page['name']?>"/>
-                </td>
-                <td class="name" style="width:65%" align="left"><?= $page['name'] ?></td>
+                <td style="width:10%;text-align: center;" align="left"><?= $page['ID'] ?></td>
+                <td class="name" style="width:50%" align="left"><?= $page['name'] ?></td>
+                <td class="name" style="width:20%;text-align: center;" align="left"><?= $page['price'] ?> руб.</td>
                 <td class="theadc" align="right">
                     <a href="<?= base_url() . 'dashboard/' . $uri . '/editPage/' . $page['ID'] ?>" class="edit" title="Редактировать">Edit</a>
                     <? if ($page['status'] == '1'): ?>

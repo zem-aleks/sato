@@ -1,25 +1,41 @@
 <?= show_editor('#content') ?>
+<?= show_editor('#short') ?>
 
 <div class="title"><?= $title; ?></div>
-<?= form_open_multipart($form_action, array('name' => 'editform')); ?> 
+<?= form_open_multipart($form_action, array('name' => 'editform')); ?>
 
-<label for="photo">Фото:</label><br />
-<? if (!empty($page['image']) && $page['image'] != 'no_image.jpg'): ?>
-    <img src="/uploads/<?= $upload_folder; ?>/thumb/<?= $page['image']; ?>" style='max-height:150px;'/><br/>
-    <label><input id="photo" type="checkbox" name="del" />Удалить</label>
-    <input type="hidden" name="image" value="<?= $page['image']; ?>" />
-<? else: ?>
-    <input id="photo" type="file" name="userfile" size="20" /> 
-<? endif; ?>	
-<br /><br />
+Фотографии:<br/>
+<div class="admin-images">
+    <? foreach ($page['images'] as $image): ?>
+        <div class="for-image">
+            <img src="/uploads/<?=$uri;?>/thumb/<?= $image['image']; ?>" alt="" title=""/><br/>
+            <input type="checkbox" name="delImage[<?= $image['ID']; ?>]"/> удалить?
+        </div>
+    <? endforeach; ?>
+    <div class="clear"></div>
+</div>
+<div class="item-photo">
+    <input class="for-copy" type="file" name="images" value=""/>
+</div>
+<div class="add-photo">Добавить</div>
 
-<label for="name">Название:</label><br />
+
+<label for="name">Модель:</label><br />
 <input id="name" name="name" maxlength="255" type="text" value="<?= set_value('name', $page['name']) ?>" />
 
-Краткое Содержание:<br />
-<textarea rows="5" name="short"><?= set_value('short', $page['short']) ?></textarea><br /><br />
+<label for="price">Цена (разделение через точку):</label><br />
+<input id="price" name="price" value="<?= $page['price']; ?>" maxlength="12" type="text"/>
 
-Содержание:<br />
+Категория товара:<br />
+<?= form_select('id_category', 'ID', 'name', $categories, $page['id_category']); ?>
+
+Бренд:<br />
+<?= form_select('id_brand', 'ID', 'name', $brands, $page['id_brand']); ?><br /><br />
+
+Краткое описание товара:<br />
+<textarea id="short" rows="5" name="short"><?= set_value('short', $page['short']) ?></textarea><br /><br />
+
+Детальное описание товара:<br />
 <textarea id="content" name="content"><?= set_value('content', $page['content']) ?></textarea><br /><br />
 
 ЧПУ (Если оставить пустым,то по названию построится автоматически.)<br />
