@@ -50,6 +50,7 @@ $route['catalog/search'] = "catalog/search/";
 $route['catalog/(:any)'] = "catalog/index/$1";
 $route['catalog/(:any)/(:any)'] = "catalog/index/$1/$2";
 $route['product/(:any)'] = "product/index/$1";
+//$route['products/(:any)'] = "products/index/$1";
 $route['articles/(:num)'] = "articles/index/$1";
 $route['news/(:num)'] = "news/index/$1";
 $route['faq/(:num)'] = "faq/index/$1";
