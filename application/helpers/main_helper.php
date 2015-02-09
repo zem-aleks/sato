@@ -36,3 +36,11 @@ function rus2translit($string)
     );
     return strtr($string, $converter);
 }
+
+function modifyDate($date)
+{
+    $months = array('Января', 'Февраля', 'Марта', 'Апреля', 'Мая', 'Июня',
+            'Июля', 'Августа', 'Сентября', 'Октября', 'Ноября', 'Декабря');
+    $d = new DateTime($date);
+    return $d->format('d') . ' ' . $months[($d->format('m') - 1)];
+}
