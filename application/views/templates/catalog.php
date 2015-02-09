@@ -1,40 +1,81 @@
-<section class="desk">
-    <div class="container">
-        <div class="heading">SATO ЭТО</div>
-        <div class="items">
-            <div class="item flag">Сделано в традициях <b>японского качества</b></div>
-            <div class="item star">Расширенная гарантия <b>на 5 лет</b></div>
-            <div class="item pencil"><b>Современный дизайн и функционал</b></div>
-        </div>
-    </div>
-</section>
-<section class="models">
-    <div class="container">
-        <div class="heading">МОДЕЛИ</div>
-        <div class="products">
-            <a href="" class="item">
+<section class="catalog container">
+    <h1>КАТАЛОГ</h1>
+    <aside>
+        <ul>
+            <li><h2>Продукция</a></h2>
+            <li><a href="" class="active">Электронные биде</a></li>
+            <li><a href="">Механические биде</a></li>
+            <li><a href="">Электронные туалеты</a></li>
+            <li><a href="">Электронные душевые кабины</a></li>
+            <li><a href="">Умные смесители воды</a></li>
+        </ul>
+    </aside>
+    <div class="products">
+        <div class="item">
+            <a href="">
                 <div class="pic">
                     <img src="/images/front/cover.png" alt="cover" />
                 </div>
                 <div class="model">SATO <span>DB300</span></div>
                 <div class="price">20 900</div>
             </a>
-            <a href="" class="item">
+            <a href="" class="details">Подробнее о модели</a>
+        </div>
+        <div class="item">
+            <a href="">
                 <div class="pic">
                     <img src="/images/front/cover.png" alt="cover" />
                 </div>
                 <div class="model"><SATO <span>DB400</span></div>
                 <div class="price">30 900</div>
             </a>
-            <a href="" class="item">
+            <a href="" class="details">Подробнее о модели</a>
+        </div>
+        <div class="item">
+            <a href="">
                 <div class="pic">
                     <img src="/images/front/cover.png" alt="cover" />
                 </div>
                 <div class="model">SATO <span>DB500</span></div>
                 <div class="price">50 900</div>
             </a>
+            <a href="" class="details">Подробнее о модели</a>
+        </div>
+        <div class="item">
+            <a href="">
+                <div class="pic">
+                    <img src="/images/front/cover.png" alt="cover" />
+                </div>
+                <div class="model">SATO <span>DB300</span></div>
+                <div class="price">20 900</div>
+            </a>
+            <a href="" class="details">Подробнее о модели</a>
+        </div>
+        <div class="item">
+            <a href="">
+                <div class="pic">
+                    <img src="/images/front/cover.png" alt="cover" />
+                </div>
+                <div class="model">SATO <span>DB300</span></div>
+                <div class="price">20 900</div>
+            </a>
+            <a href="" class="details">Подробнее о модели</a>
+        </div>
+        <div class="item">
+            <a href="">
+                <div class="pic">
+                    <img src="/images/front/cover.png" alt="cover" />
+                </div>
+                <div class="model">SATO <span>DB300</span></div>
+                <div class="price">20 900</div>
+            </a>
+            <a href="" class="details">Подробнее о модели</a>
         </div>
     </div>
+    <div class="clear"></div>
+    <div class="contain"><a href="" class="view-more">Еще ассортимент</a></div>
+    <div class="clear"></div>
+    <a href="" class="sort">Сортировка: <span>По ценам</span></a>
 </section>
 <section class="compare">
     <div class="container">
