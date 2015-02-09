@@ -143,10 +143,8 @@ header .btm-line > div {
     vertical-align: top;
 }
 nav.main {
-    background-color: #fff;
-    margin: 0 auto;
-    width: 960px;
     font-weight: bold;
+    background-image: -webkit-gradient(  linear,  left top,  left bottom,  color-stop(0, #F6F6F6),  color-stop(0.5, #FAFAFA),  color-stop(1, #F6F6F6) ); background-image: -o-linear-gradient(bottom, #F6F6F6 0%, #FAFAFA 50%, #F6F6F6 100%); background-image: -moz-linear-gradient(bottom, #F6F6F6 0%, #FAFAFA 50%, #F6F6F6 100%); background-image: -webkit-linear-gradient(bottom, #F6F6F6 0%, #FAFAFA 50%, #F6F6F6 100%); background-image: -ms-linear-gradient(bottom, #F6F6F6 0%, #FAFAFA 50%, #F6F6F6 100%); background-image: linear-gradient(to bottom, #F6F6F6 0%, #FAFAFA 50%, #F6F6F6 100%);
 }
 nav.main ul {
     font-size: 0px;
@@ -443,6 +441,7 @@ h1 {
     font-weight: bold;
     outline: none;
     padding: 10px 0px;
+    cursor: pointer;
 }
 .contact-page .map {
     margin-bottom: 70px;

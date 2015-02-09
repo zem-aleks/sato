@@ -48,7 +48,7 @@
                     </div>
                 </header>
                 <nav class="main">
-                    <ul>
+                    <ul class="container">
                         <? foreach($menu as $item): ?>
                         <li><a href="<?=$item['url']; ?>" class="<?=($item['chpu'] == $page)? 'active' : ''?>"><?=$item['cat_name'];?></a></li>
                         <?endforeach; ?>
