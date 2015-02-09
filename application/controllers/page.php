@@ -69,7 +69,7 @@ class Page extends Controller {
                 или перейдите по следующей ссылке:<br/>
                 <a href="'.base_url().'dashboard/comments/editPage/'.$id.'">ссылка на сообщение</a>';
             
-            $this->load->module('mail')->sendMessage($settings['emailContact'], 'Новое сообщение на Interactis.ru', $text);
+            $this->load->module('mail')->sendMessage($settings['emailContact'], 'Новое сообщение на Sato', $text);
             $_SESSION['success'] = 1;
             redirect('/page/' . $chpu);
         }
@@ -80,7 +80,7 @@ class Page extends Controller {
             array(
                 'field' => 'name',
                 'label' => 'Имя',
-                'rules' => 'trim|alpha|required|min_length[2]|max_length[255]|xss_clean'
+                'rules' => 'trim|required|min_length[2]|max_length[255]|xss_clean'
             ),
             array(
                 'field' => 'phone',
