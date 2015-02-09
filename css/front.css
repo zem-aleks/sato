@@ -43,7 +43,6 @@ body {
     margin: 0 auto;
     text-align: left;
     margin-top: 48px;
-    text-decoration: underline;
 }
 .main-wrapper {
     min-height: 100%;
@@ -379,7 +378,7 @@ section.about .text p {
     vertical-align: top;  
     width: 450px;
 }
-.contact-page h1 {
+h1 {
     font-family: 'Roboto Light';
     font-size: 48px;
     margin-bottom: 34px;
@@ -415,7 +414,7 @@ section.about .text p {
     margin-top: 35px;
 }
 .contact-page .write .text {
-    width: 352px;
+    width: 371px;
     margin-bottom: 20px;
     border: 1px solid #eaeff0;
     padding-top: 12px;
@@ -431,8 +430,11 @@ section.about .text p {
     resize: none;
     margin-bottom: 25px;
 }
+.write .contact-description {
+    width: 388px;
+}
 .contact-page .write .contact-submit {
-    width: 371px;
+    width: 390px;
     background-color: #909ea9;
     border: none;
     border-radius: 2px;
@@ -444,6 +446,8 @@ section.about .text p {
 }
 .contact-page .map {
     margin-bottom: 70px;
+    width: 850px;
+    overflow: hidden;
 }
 footer {
     height: 200px;
@@ -513,20 +517,78 @@ footer .btm-line .copyright .about {
     margin-top: -7px;
 }
 .alert-danger {
-color: #a94442;
-background-color: #f2dede;
-border-color: #ebccd1;
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
 }
 .alert {
-padding: 15px;
-margin-bottom: 20px;
-border: 1px solid transparent;
-border-radius: 4px;
-box-sizing: border-box;
-line-height: 1.2em;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    box-sizing: border-box;
+    line-height: 1.2em;
 }
 .alert-success {
-color: #3c763d;
-background-color: #dff0d8;
-border-color: #d6e9c6;
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}
+.breadcrumbs a {
+    text-decoration: underline;
+}
+.breadcrumbs a:hover {
+    text-decoration: none;
+}
+.breadcrumbs a:last-child {
+    text-decoration: none;
+}
+.media:first-child {
+    margin-top: 0;
+}
+.media {
+    margin-top: 50px;
+}
+.media>.pull-left {
+    margin-right: 20px;
+    width: 112px;
+    height: 112px;
+    border-radius: 7px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.pull-left {
+    float: left!important;
+}
+.media-body {
+    width: 555px;
+    font-size: 16px;
+    line-height: 21px;
+}
+.media, .media-body {
+    overflow: hidden;
+    zoom: 1;
+}
+.media-body .date {
+    color: #d3d8d9;
+    font-size: 14px;
+    margin-top: -4px;
+}
+.media-body .media-heading {
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+    line-height: 25px;
+    margin-bottom: 4px;
+}
+.front-list {
+    margin-top: 36px;
+}
+.title {
+    margin-top: 14px;
+    text-transform: uppercase;
+}
+.media-body .media-heading:hover {
+    color: #25bbe6;
 }
