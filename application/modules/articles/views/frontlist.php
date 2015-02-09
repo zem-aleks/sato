@@ -1,4 +1,4 @@
-<div class="title container"><?=$title;?></div>
+<h1 class="title container"><?=$title;?></h1>
 <div class="container front-list">
     <? foreach ($entries as $entry): ?>
     <div class="media">
