@@ -372,6 +372,7 @@ section.about .text p {
     display: inline-block;
     vertical-align: top;
     width: 455px;
+    margin-bottom: 18px;
 }
 .contact-page .write {
     display: inline-block;  
@@ -440,6 +441,9 @@ section.about .text p {
     font-weight: bold;
     outline: none;
     padding: 10px 0px;
+}
+.contact-page .map {
+    margin-bottom: 70px;
 }
 footer {
     height: 200px;
