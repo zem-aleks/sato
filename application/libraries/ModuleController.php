@@ -70,9 +70,11 @@ class ModuleController extends Controller{
         $config['total_rows'] = $this->{$this->md}->getCount(1);
         $config['per_page'] = $limit;
         $config['uri_segment'] = $uriSegment;
-        $config['prev_tag_open'] = '<div style="display:none;">';
-        $config['prev_tag_close'] = '</div>';
+        $config['first_tag_open'] = $config['last_tag_open'] = '<div style="display:none;">';
+        $config['first_tag_close'] = $config['last_tag_close'] =  '</div>';
         $config['first_link'] = $config['last_link'] = $config['next_link'] = $config['prev_link'] = '';
+        $config['next_link'] = '>';
+        $config['prev_link'] = '<';
         $this->pagination->initialize($config);
         return $this->pagination->create_links();
     }

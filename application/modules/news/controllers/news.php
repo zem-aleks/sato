@@ -11,7 +11,7 @@ class News extends ModuleController {
         'uri' => 'news',
         'upload_folder' => 'news',
         'tb' => 'news',
-        'perPage' => 1,
+        'perPage' => 10,
         'mainPage' => 'news',
         'media_fields' => array('image', 'thumb'),
     );

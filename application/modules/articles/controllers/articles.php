@@ -20,6 +20,12 @@ class Articles extends ModuleController {
     public function __construct() {
         parent::__construct(self::$config, self::$md);
     }
+    
+    public function modifyEntry($entry)
+    {
+        $entry['date'] = modifyDate($entry['date']);
+        return $entry;
+    }
 
     /*function index($start = 0)
     {
