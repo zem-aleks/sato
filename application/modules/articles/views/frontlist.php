@@ -10,6 +10,5 @@
         </div>
     </div>
     <? endforeach; ?>
-    
     <div class="pagination"><?=$paginator; ?></div>
 </div>

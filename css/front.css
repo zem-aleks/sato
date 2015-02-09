@@ -605,6 +605,7 @@ footer .btm-line .copyright .about {
 .view .date {
     color: #d3d8d9;
     font-size: 14px;
+    text-transform: uppercase;
 }
 .view .text h3 {
     font-size: 25px;
@@ -613,7 +614,7 @@ footer .btm-line .copyright .about {
 }
 .view h1 {
     line-height: 45px;
-    margin-bottom: 28px;
+    margin-bottom: 32px;
 }
 .view .text p {
     line-height: 18px;
@@ -652,4 +653,42 @@ background-image: linear-gradient(to bottom, #FCD45B 10%, #FFE186 100%);
 -moz-border-radius: 8px;
 
     border-radius: 2px;
+}
+.view .read-news {
+    margin-top: 48px;
+    margin-bottom: 100px;
+    width: 430px;
+}
+.view .read-news .articles {
+    width: 100%;
+}
+.view .article {
+    width: 100%;
+    margin-bottom: 24px;
+}
+.article .img {
+    width: 57px;
+    height: 57px;
+    float: left;
+    background-color: #e3e3e3;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+}
+.text-data {
+    float: left;
+    margin-left: 20px;
+    width: 350px;
+}
+.article .title {
+    display: block;
+    text-align: left;
+    margin-top: -2px;
+    font-weight: bold;
+    text-transform: none;
+    line-height: 22px;
+}
+.view .read-news .text-data div {
+    font-size: 14px;
 }
