@@ -691,3 +691,110 @@ background-image: linear-gradient(to bottom, #FCD45B 10%, #FFE186 100%);
 .view .read-news .text-data div {
     font-size: 14px;
 }
+section.catalog {
+    margin-top: 20px;
+    position: relative;
+}
+section.catalog aside {
+    width: 156px;
+    float: left;
+    margin-right: 70px;
+    height: 100%;
+}
+.catalog aside ul li a {
+    border-bottom: 1px dotted;
+    font-size: 14px;
+    display: inline-block;
+    padding-top: 8px;
+    line-height: 20px;
+}
+.catalog h1 {
+    font-size: 30px;
+}
+.catalog aside ul li .active {
+    background-color: #fddf52;    
+    height: 18px;
+    padding-left: 12px;
+    padding-right: 16px;
+    line-height: 12px;
+    margin-top: 8px;  
+    margin-left: -9px;  
+    border: none;
+    border-radius: 3px;
+}
+.catalog .products .item {
+    margin-right: 36px;
+    margin-bottom: 60px;
+    position: relative;
+}
+.catalog .products {
+    width: 700px;
+    float: left;
+}
+.catalog .products .item:nth-child(3n) {
+    margin-right: 0px;
+}
+.catalog .products .item .model {
+    font-size: 24px;
+    font-family: 'Roboto Bold';
+    margin-top: 33px;
+    padding-left: 25px;
+}
+.catalog .products .item .price {
+    font-size: 24px;
+    font-family: 'Roboto Bold';
+    color: #ff585d;
+    padding-left: 25px;
+    padding-top: 2px;
+}
+.catalog aside ul li h2 {
+    font-family: 'Roboto Bold';
+    font-size: 14px;
+    padding-top: 6px;
+}
+.catalog .details {
+    width: 180px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: #fddf52;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 3px;
+    display: none;
+}
+.catalog .products .item:hover .details {
+    display: inline-block;
+    position: absolute;
+    top: 90px;
+    left: 7px;
+}
+.catalog .view-more {
+    background-color: #faf9fa;
+    width: 415px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 18px;
+    text-align: center;
+    margin-left: 98px;
+    display: block;
+    margin-top: 32px;
+    margin-bottom: 6px;
+}
+.catalog .contain {
+    width: 700px;
+    float: right;
+}
+.catalog .sort {
+    width: 170px;
+    font-family: 'Roboto Regular';
+    font-size: 14px;
+    position: absolute;
+    top: 6px;
+    right: 67px;
+    background: url(/images/front/arrow-down.png) 140px 4px no-repeat;
+}
+.catalog .sort span {
+    color: #15c1ec;
+    border-bottom: 1px dotted #15c1ec;
+}
