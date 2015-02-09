@@ -49,7 +49,7 @@ $(document).ready(function() {
 
 
     //---------my-select---------------------//
-
+/*
     $('.items').on('click', '.my-select', function(e) {
         var is_open = $(this).hasClass('open');
         var $list = $(this).find('.options');
@@ -83,7 +83,7 @@ $(document).ready(function() {
         if ($(event.target).closest('.my-select').length == 0)
             $('.my-select').removeClass('open');
     });
-
+*/
     //-----------end my-select--------------//
 
 
