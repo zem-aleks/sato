@@ -1,24 +1,27 @@
-<section class="catalog-info container">
+<section class="catalog-info product-view container">
     <div class="gallery">
-        <h1><span>SATO</span> DB300</h1>
-        <div class="pic"><img src=""/></div>
-        <div class="thumb"><img src=""/></div>
-        <div class="thumb"><img src=""/></div>
-        <div class="thumb"><img src=""/></div>
+        <h1><span><?= $product['brand']['name']; ?></span> <?= $product['name']; ?></h1>
+        <div class="gallery-slider">
+            <ul class="slides">
+                <? foreach ($product['images'] as $image): ?>
+                    <li class="pic">
+                        <img src="/uploads/products/original/<?= $image['image']; ?>" alt="" />
+                    </li>
+                <? endforeach; ?>
+            </ul>
+
+            <? if (count($product['images']) > 1): ?>
+                <ul class="flex-control-nav">
+                    <? foreach ($product['images'] as $image): ?>
+                        <li style="background-image: url(/uploads/products/thumb/<?= $image['image']; ?>)"></li>
+                    <? endforeach; ?>
+                </ul>
+            <? endif; ?>
+        </div>
     </div>
     <div class="description">
-        <p>Особенности электронного биде <b>SATO DB300:</b></p>
-        <ul>
-            <li>3 вида формы биде - короткая, круглая, удлиненная</li>
-            <li>Память настроек режимов</li>
-            <li>Режим Клизмы</li>
-            <li>Энергосберегающий режим</li>
-            <li>3 вида формы биде</li>
-            <li>Память настроек режимов</li>
-            <li>Режим Клизмы</li>
-            <li>Энергосберегающий режим</li>
-        </ul>
-        <div class="price">20 990<span class="rub">Р</span></div>
+        <?= $product['short']; ?>
+        <div class="price"><?= $product['price']; ?> <span class="rub">Р</span></div>
         <div class="button">КУПИТЬ</div>
     </div>
     <div class="clear"></div>

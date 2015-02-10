@@ -7,7 +7,7 @@ class Products extends ModuleController {
 
     public static $config = array(
         'name' => 'products',
-        'title' => 'Товары',
+        'title' => 'Продукция',
         'uri' => 'products',
         'upload_folder' => 'products',
         'tb' => 'products',
@@ -35,7 +35,8 @@ class Products extends ModuleController {
         $entry['brand'] = $this->load->module('dictionary')->getValue($entry['id_brand']);
         $entry['category'] = $this->load->module('dictionary')->getValue($entry['id_category']);
         $entry['date'] = modifyDate($entry['date']);
-        $entry['price'] = (int)$entry['price'];
+        $entry['price'] = number_format((int)$entry['price'], 0, ',', ' ');
+        //($number, 2, ',', ' ');
         return $entry;
     }
     
@@ -57,6 +58,12 @@ class Products extends ModuleController {
         $query = $this->db->get('images');
         $content['page']['images'] = $query->result_array();
         return $content;
+    }
+    
+    public function modifyViewContent($content)
+    {
+        $content['product'] = $content['view'];
+        return parent::modifyViewContent($content);
     }
 
 

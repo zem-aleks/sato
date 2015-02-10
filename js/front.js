@@ -15,12 +15,14 @@ $(document).ready(function() {
     
     $('.gallery-slider').each(function(){
         var $this = $(this);
+        var isDirectionNav = $this.closest('.product-view').length <= 0;
         $this.flexslider({
             slideshow : false,
             animation : 'slide',
             prevText: "",
             nextText: "",
             manualControls : $this.find('.flex-control-nav li'),
+            directionNav: isDirectionNav,  
         });
     });
     

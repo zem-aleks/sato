@@ -805,8 +805,9 @@ section.catalog aside {
     border-bottom: 1px dotted #15c1ec;
 }
 section.catalog-info .gallery {
-    width: 394px;
+    width: 380px;
     float: left;
+    margin-right: 14px;
 }
 section.catalog-info .description {
     width: 490px;
@@ -819,16 +820,13 @@ section.catalog-info h1 span {
     font-family: 'Roboto Bold';
 }
 .catalog-info .gallery .pic {
-    background-color: #e3e3e3;
     width: 350px;
-    height: 450px;
     margin-bottom: 10px;
 }
 .catalog .sort.desc {
     background-position: 140px -8px;
 }
 .catalog-info .description p {
-    width: 235px;
     margin-bottom: 30px;
     line-height: 25px;
 }
@@ -850,6 +848,7 @@ section.catalog-info {
     margin-top: 25px;
     border-radius: 3px;
     cursor: pointer;
+    font-weight: bold;
 }
 .catalog-info .description .price, .item-decription .price {
     color: #ff535a;
@@ -858,7 +857,6 @@ section.catalog-info {
 }
 .catalog-info .description ul {
     margin-left: 18px;
-    margin-bottom: 206px;
 }
 .rub {
     display: inline-block;
@@ -966,6 +964,7 @@ section.catalog-info {
 }
 .gallery-slider {
     padding-bottom: 50px;
+    position: relative;
 }
 
 .flex-control-nav {
@@ -1075,4 +1074,18 @@ section.catalog-info {
 }
 .item-details img {              
     box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.2);
+}
+.product-view .flex-control-nav {
+    height: 70px;
+    text-align: left;
+}
+
+.product-view .flex-control-nav li {
+    width: 80px;
+    height: 70px;
+    box-sizing: border-box;
+}
+
+.product-view .gallery-slider {
+    padding-bottom: 80px;
 }
