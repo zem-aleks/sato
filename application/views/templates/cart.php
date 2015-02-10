@@ -18,33 +18,13 @@
         <div class="quantity">
             <div>Количество:</div>
             <input type="number" class="number" value="<?=$product['count'];?>"/>
-            <div class="price"><?=$product['price'];?> Р</div>
+            <div class="price"><?=$product['price'];?> <span class="rub rub-2">Р</span></div>
         </div>
         <a href="javascript:void(0);" class="close product-remove">х</a>
     </div>
     <? endforeach; ?>
     
     <div class="total">Общая сумма: <span class="price"><span class="cart-sum"><?=number_format((int)$sum, 0, ',', ' ');?></span> Р</span></div>
-    <div class="product">
-        <div class="item">
-            <a href="">
-                <div class="pic">
-                    <img src="" alt="" />
-                </div>
-                <div class="model">
-                    <span>Sato</span>
-                    <span>DB500</span>
-                </div>
-            </a>
-        </div>
-        <div class="quantity">
-            <div>Количество:</div>
-            <div class="number">1</div>
-            <div class="price">20 900Р <span class="rub rub-2">Р</span></div>
-        </div>
-        <a href="" class="close">х</a>
-    </div>
-    <div class="total">Общая сумма: <span class="price">41 800 <span class="rub rub-2">Р</span></span></div>
 </section>
 <section class="form-order container">
     <h1>Форма заказа</h1>
