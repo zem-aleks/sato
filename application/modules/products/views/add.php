@@ -30,7 +30,14 @@
 <?= form_select('id_category', 'ID', 'name', $categories, $page['id_category']); ?>
 
 Бренд:<br />
-<?= form_select('id_brand', 'ID', 'name', $brands, $page['id_brand']); ?><br /><br />
+<?= form_select('id_brand', 'ID', 'name', $brands, $page['id_brand']); ?>
+
+<br /><br />
+<label>
+    <input name="on_main" type="checkbox" <? if($page['on_main']):?>checked="checked"<? endif;?>/>
+    Показывать на главной странице?
+</label>
+<br /><br />
 
 Краткое описание товара:<br />
 <textarea id="short" rows="5" name="short"><?= set_value('short', $page['short']) ?></textarea><br /><br />

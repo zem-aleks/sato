@@ -44,6 +44,7 @@ class Mdl_products extends ModuleModel {
         $data['price'] = $this->input->post('price');
         $data['id_category'] = $this->input->post('id_category');
         $data['id_brand'] = $this->input->post('id_brand');
+        $data['on_main'] = $this->input->post('on_main')? 1 : 0;
         $data['short'] = $this->input->post('short');
         $data['content'] = $this->input->post('content');
         $data['date'] = date('Y-m-d H:i:s');
@@ -55,7 +56,8 @@ class Mdl_products extends ModuleModel {
         if (empty($data['chpu']))
             $data['chpu'] = $this->checkChpu(rus2translit($data['name']));
         
-        $id = $this->db->insert($this->tb, $data);
+        $this->db->insert($this->tb, $data);
+        $id = $this->db->insert_id();
         
         foreach ($_FILES as $key => $file) {
             $result = uploadImage($_SERVER['DOCUMENT_ROOT'] . '/uploads/products/', $key);
@@ -84,6 +86,7 @@ class Mdl_products extends ModuleModel {
         $data['mkeys'] = $this->input->post('mkeys');
         $data['mdesc'] = $this->input->post('mdesc');
         $data['chpu'] = $this->input->post('chpu');
+        $data['on_main'] = $this->input->post('on_main')? 1 : 0;
         if (empty($data['chpu']))
             $data['chpu'] = $this->checkChpu(rus2translit($data['name']));
         
