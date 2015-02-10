@@ -189,6 +189,14 @@ class Cart extends Controller {
     
     function purchase() {
         $result = array();
+        
+        $cart = $this->getCart();
+        if(empty($cart)) {
+            $result['error'] = 'Корзина пуста!';
+            $result['status'] = -4;
+            return $result;
+        }
+        
         $this->load->library('form_validation');
         $config = $this->_purchaseConfig();
         $this->form_validation->set_rules($config);
@@ -199,7 +207,7 @@ class Cart extends Controller {
             $_SESSION['user'] = $user_data;
         } else {
             
-            $cart = $this->getCart();
+            //$cart = $this->getCart();
             $user_data = $this->input->post(NULL, TRUE);
             $_SESSION['user'] = $user_data;
             $is_mail = $this->load->module('mail')->sendPurchase($user_data, $cart);
