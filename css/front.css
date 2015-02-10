@@ -798,3 +798,77 @@ section.catalog aside {
     color: #15c1ec;
     border-bottom: 1px dotted #15c1ec;
 }
+section.catalog-info .gallery {
+    width: 394px;
+    float: left;
+}
+section.catalog-info .description {
+    width: 490px;
+    float: left;
+}
+section.catalog-info h1 {
+    text-transform: uppercase;
+}
+section.catalog-info h1 span {
+    font-family: 'Roboto Bold';
+}
+.catalog-info .gallery .pic {
+    background-color: #e3e3e3;
+    width: 350px;
+    height: 450px;
+    margin-bottom: 10px;
+}
+.catalog-info .gallery .pic img {
+    max-width: 100%;
+    max-height: 100%;
+    text-align: center;
+    vertical-align: middle;
+}
+.catalog .sort.desc {
+    background-position: 140px -8px;
+}
+.catalog-info .description p {
+    width: 235px;
+    margin-bottom: 30px;
+    line-height: 25px;
+}
+section.catalog-info {
+    padding-top: 14px;
+}
+.catalog-info .description li {
+    line-height: 30px;
+    list-style: disc;
+}
+.catalog-info .description .button {
+    width: 260px;
+    font-size: 20px;
+    height: 50px;
+    text-align: center;
+    background-color: #fddf52;
+    line-height: 50px;
+    margin-top: 25px;
+    border-radius: 3px;
+}
+.catalog-info .description .price {
+    color: #ff535a;
+    font-size: 48px;
+    margin-top: 40px;
+}
+.catalog-info .description ul {
+    margin-left: 18px;
+}
+.rub {
+    display: inline-block;
+    border-bottom: 1px solid;
+    line-height: 0px;
+    width: 8px;
+    height: 3px;
+    font-size: 13.0pt;
+    box-sizing: border-box;
+}
+.catalog-info .description .price span.rub {
+    font-size: 48px;
+    height: 8px;
+    width: 25px;
+    border-bottom: 3px solid;
+}
