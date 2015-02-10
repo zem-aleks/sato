@@ -21,6 +21,11 @@ class Products extends ModuleController {
     {
         parent::__construct(self::$config, self::$md);
     }
+    
+    public function index($start = 0)
+    {
+        redirect('/catalog');
+    }
 
     public function modifyEntry($entry)
     {

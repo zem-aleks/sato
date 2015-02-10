@@ -27,86 +27,17 @@
     <div class="clear"></div>
 </section>
 <section class="tech-info container">
-    <table>
-        <thead>
-            <tr>
-                <td>Тех. характеристики</td>
-                <td>Сравнить</td>
-                <td>Отзывы</td>
-                <td>Галерея</td>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Управление</td>
-                <td>Боковая панель управления</td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Направление сети</td>
-                <td>AC 220 ~ 240 V - 50 Hz</td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Потребляемая мощность</td>
-                <td>max 1270 Вт</td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Рабочее давление воды</td>
-                <td>0.70 - 7.50 кгС/см2</td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Подогрев сиденья</td>
-                <td>Выкл./34°C/38°C/42°C</td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Регулировка температуры</td>
-                <td>Выкл./34°C/38°C/42°C</td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Обогрев сиденья</td>
-                <td>55 Вт</td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Защита</td>
-                <td>температурный предохранитель</td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Омывание, Обмыв, Биде, Клизма</td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Потребление воды Обмыв/Биде/Клизма</td>
-                <td>0.6/0.7/0.5 л/мин.</td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Контроль давления воды </td>
-                <td>5-ступенчатое регулирование</td>
-                <td></td>
-                <td></td>
-            </tr>
-        </tbody>
-    </table>
-    <div class="container">
-        <div></div>
-        <div></div>
-    </div>
+    <h2 class="arrow_box">Тех. характеристики</h2>
+    <?= $product['content']; ?>
+    <!--<div class="addition">
+        <div class="files">
+            Файлы для скачивания
+            <a href="">Инструкция DB300</a>
+        </div>
+        <div class="sertificates">
+            Товар получил сертификаты<br>
+            <img src="/images/front/serts.jpg" alt="Товар получил сертификаты" />
+        </div>
+        <div class="clear"></div>
+    </div>-->
 </section>
