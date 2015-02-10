@@ -1100,7 +1100,7 @@ header .top-line .cart:hover {
     width: 575px;
     height: 100px;
 }
-.pic {
+.cart .product .pic {
     width: 80px;
     height: 100px;
     background-color: #e3e3e3;
@@ -1213,7 +1213,6 @@ textarea.text {
     font-weight: normal;
     line-height: 23px;
 }
-}
 .product-view .flex-control-nav {
     height: 70px;
     text-align: left;
@@ -1229,32 +1228,32 @@ textarea.text {
     padding-bottom: 80px;
 }
 .arrow_box {
-	position: relative;
-	background: #fff;
-	border: 2px solid #e0e0e5;
+    position: relative;
+    background: #fff;
+    border: 2px solid #e0e0e5;
 }
 .arrow_box:after, .arrow_box:before {
-	top: 100%;
-	left: 50%;
-	border: solid transparent;
-	content: " ";
-	height: 0;
-	width: 0;
-	position: absolute;
-	pointer-events: none;
+    top: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
 }
 
 .arrow_box:after {
-	border-color: rgba(255, 255, 255, 0);
-	border-top-color: #fff;
-	border-width: 10px;
-	margin-left: -10px;
+    border-color: rgba(255, 255, 255, 0);
+    border-top-color: #fff;
+    border-width: 10px;
+    margin-left: -10px;
 }
 .arrow_box:before {
-	border-color: rgba(224, 224, 229, 0);
-	border-top-color: #e0e0e5;
-	border-width: 13px;
-	margin-left: -13px;
+    border-color: rgba(224, 224, 229, 0);
+    border-top-color: #e0e0e5;
+    border-width: 13px;
+    margin-left: -13px;
 }
 .tech-info h2 {
     font-size: 24px;
