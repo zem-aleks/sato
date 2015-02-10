@@ -25,14 +25,6 @@
 </section>
 <section class="tech-info container">
     <table>
-        <thead>
-            <tr>
-                <td>Тех. характеристики</td>
-                <td>Сравнить</td>
-                <td>Отзывы</td>
-                <td>Галерея</td>
-            </tr>
-        </thead>
         <tbody>
             <tr>
                 <td>Управление</td>
