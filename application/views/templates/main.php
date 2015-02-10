@@ -14,7 +14,7 @@
                 </div>
 
                 <div class="item-gallery">
-                    <div class="thumbs gallery-slider">
+                    <div class="gallery-slider">
                         <ul class="slides">
                             <? foreach ($product['images'] as $image): ?>
                             <li class="pic">
