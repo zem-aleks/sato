@@ -5,7 +5,7 @@ if (!defined('BASEPATH'))
 
 class Mdl_products extends ModuleModel {
 
-    public $tb = '';
+    public $tb = 'products';
     public $config = array();
     public $uploadConfig = array(
         'allowed_types' => 'gif|jpg|png|bmp',
@@ -19,7 +19,7 @@ class Mdl_products extends ModuleModel {
         parent::__construct($this->tb, $this->config, $this->uploadConfig);
     }
     
-    function getFilterEntries($start, $limit, $status, $filter) {
+    function getFilterEntries($start, $limit, $status, $filter, $order = 'c1.sort') {
         $this->db->select('c1.*');
         $this->db->from($this->tb . ' as c1');
         if ($status >= 0)
@@ -28,7 +28,7 @@ class Mdl_products extends ModuleModel {
             $this->db->where($filter);
         if ($limit > 0)
             $this->db->limit($limit, $start);
-        $this->db->order_by('c1.sort');
+        $this->db->order_by($order);
         $query = $this->db->get();
 
         if ($query->num_rows() > 0) {

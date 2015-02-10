@@ -7,7 +7,7 @@ class Mdl_dictionary extends Model {
     {
         if($type)
             $this->db->where('type', $type);
-        $this->db->order_by('name');
+        $this->db->order_by('ID');
         $query = $this->db->get('item_options');
         return $query->result_array();
     }

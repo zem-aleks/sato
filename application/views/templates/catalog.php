@@ -1,81 +1,25 @@
-<section class="catalog container">
+<section class="catalog container"  data-id="<?=$current['category'];?>" data-sort="<?=$current['order'];?>">
     <h1>КАТАЛОГ</h1>
+    <a href="/catalog/<?=$current['category'];?>/<?=$current['order'] == 'asc'? 'desc' : 'asc' ;?>" class="sort <?=$current['order'];?>">Сортировка: <span>По ценам</span></a>
     <aside>
         <ul>
-            <li><h2>Продукция</a></h2>
-            <li><a href="" class="active">Электронные биде</a></li>
-            <li><a href="">Механические биде</a></li>
-            <li><a href="">Электронные туалеты</a></li>
-            <li><a href="">Электронные душевые кабины</a></li>
-            <li><a href="">Умные смесители воды</a></li>
+            <li><a href="/catalog" style="border-bottom: none;"><h2>Продукция</h2></a></li>
+            <? foreach ($categories as $category): ?>
+            <li><a href="/catalog/<?=$category['ID'];?>/<?=$current['order'];?>" <? if($current['category'] == $category['ID']): ?>class="active"<? endif;?>><?=$category['name'];?></a></li>
+            <? endforeach; ?>
         </ul>
     </aside>
     <div class="products">
-        <div class="item">
-            <a href="">
-                <div class="pic">
-                    <img src="/images/front/cover.png" alt="cover" />
-                </div>
-                <div class="model">SATO <span>DB300</span></div>
-                <div class="price">20 900</div>
-            </a>
-            <a href="" class="details">Подробнее о модели</a>
-        </div>
-        <div class="item">
-            <a href="">
-                <div class="pic">
-                    <img src="/images/front/cover.png" alt="cover" />
-                </div>
-                <div class="model"><SATO <span>DB400</span></div>
-                <div class="price">30 900</div>
-            </a>
-            <a href="" class="details">Подробнее о модели</a>
-        </div>
-        <div class="item">
-            <a href="">
-                <div class="pic">
-                    <img src="/images/front/cover.png" alt="cover" />
-                </div>
-                <div class="model">SATO <span>DB500</span></div>
-                <div class="price">50 900</div>
-            </a>
-            <a href="" class="details">Подробнее о модели</a>
-        </div>
-        <div class="item">
-            <a href="">
-                <div class="pic">
-                    <img src="/images/front/cover.png" alt="cover" />
-                </div>
-                <div class="model">SATO <span>DB300</span></div>
-                <div class="price">20 900</div>
-            </a>
-            <a href="" class="details">Подробнее о модели</a>
-        </div>
-        <div class="item">
-            <a href="">
-                <div class="pic">
-                    <img src="/images/front/cover.png" alt="cover" />
-                </div>
-                <div class="model">SATO <span>DB300</span></div>
-                <div class="price">20 900</div>
-            </a>
-            <a href="" class="details">Подробнее о модели</a>
-        </div>
-        <div class="item">
-            <a href="">
-                <div class="pic">
-                    <img src="/images/front/cover.png" alt="cover" />
-                </div>
-                <div class="model">SATO <span>DB300</span></div>
-                <div class="price">20 900</div>
-            </a>
-            <a href="" class="details">Подробнее о модели</a>
-        </div>
+        <? foreach ($products as $product): ?>
+            <? $this->load->view('templates/item', array('product' => $product)) ?>
+            
+        <? endforeach;?>
     </div>
     <div class="clear"></div>
+    <? if(count($products) == 6): ?>
     <div class="contain"><a href="" class="view-more">Еще ассортимент</a></div>
     <div class="clear"></div>
-    <a href="#" class="sort">Сортировка: <span>По ценам</span></a>
+    <? endif; ?>
 </section>
 <section class="compare">
     <div class="container">

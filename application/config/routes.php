@@ -47,6 +47,7 @@ $route['dashboard/(:any)/(:any)'] = "$1/$2";
 $route['dashboard/(:any)/(:any)/(:any)'] = "$1/$2/$3";
 
 $route['catalog/search'] = "catalog/search/";
+$route['catalog/products/(:any)/(:any)/(:any)/(:any)'] = "catalog/productsJson/$1/$2/$3/$4";
 $route['catalog/(:any)'] = "catalog/index/$1";
 $route['catalog/(:any)/(:any)'] = "catalog/index/$1/$2";
 $route['product/(:any)'] = "product/index/$1";

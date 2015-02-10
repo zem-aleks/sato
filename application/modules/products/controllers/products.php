@@ -24,6 +24,15 @@ class Products extends ModuleController {
 
     public function modifyEntry($entry)
     {
+        $this->db->where('id_item', $entry['ID']);
+        $this->db->order_by('ID ASC');
+        $query = $this->db->get('images');
+        
+        $entry['image'] = 'no_image.jpg';
+        $entry['images'] = $query->result_array();
+        if(!empty($entry['images']))
+            $entry['image'] = $entry['images'][0]['image'];
+        $entry['brand'] = $this->load->module('dictionary')->getValue($entry['id_brand']);
         $entry['date'] = modifyDate($entry['date']);
         return $entry;
     }
