@@ -80,28 +80,66 @@ $(document).ready(function () {
         return false;
     });
 
-    $('.product-buy').click(function(){
+    $('.product-buy').click(function () {
         var id = $(this).data('id');
         var count = 1;
         addProduct(id, count, null);
     });
-    
-    $('.product-remove').click(function(){
+
+    $('.product-remove').click(function () {
         var $row = $(this).closest('.product');
         var id = $row.data('id');
         deleteFromCart(id, $row);
     });
-    
-    
-    $('.cart .number').change(function(){
-        if(isNaN( $(this).val()) || $(this).val() <= 0)
-             $(this).val(1);
+
+
+    $('.cart .number').change(function () {
+        if (isNaN($(this).val()) || $(this).val() <= 0)
+            $(this).val(1);
         var sum = 0.;
-        $('.cart .product').each(function(){
-            sum += parseInt($(this).data('price') * $(this).find('.number').val());
+        $('.cart .product').each(function () {
+            sum += parseInt($(this).data('price') * $(this).find('.number').
+                    val());
         });
         updateCart();
         $('.cart-sum').text(sum);
+    });
+
+
+    $('.form-order form').submit(function (e) {
+        var data = {};
+        data.name = $('.form-order [name="name"]').val();
+        data.phone = $('.form-order [name="phone"]').val();
+        data.address = $('.form-order [name="address"]').val();
+        data.delivery = $('.form-order [name="delivery"]').val();
+        data.payment = $('.form-order [name="payment"]').val();
+        data.email = $('.form-order [name="email"]').val();
+        data.comment = $('.form-order [name="comment"]').val();
+
+        $.ajax({
+            url: '/ajax/purchase',
+            type: 'POST',
+            dataType: 'JSON',
+            data: data,
+            success: function (obj) {
+                if (obj.status <= 0) {
+                    $('.alert').html(obj.error).show('500');
+                    alert('Ошибка ввода данных');
+                } else {
+                     $('.alert').html(
+                             'Ваш заказ успешно отправил и будет обработан в ближайшее время. Вам на почту будет выслано уведомление.')
+                             .show(500).addClass('alert-success').removeClass('alert-danger');
+                     setTimeout(function(){
+                         window.location = '/';
+                     }, 5000);
+                }
+            },
+            error: function (e) {
+                alert(
+                        'Ошибка сервера. Попробуйте обновить страницу или повторить оперцаию позже.')
+            }
+        });
+        return false;
     });
 });
 
@@ -112,12 +150,13 @@ function updateCart()
     var items = [];
     $('.cart .product').each(function () {
         items.push({
-            id : $(this).data('id'),
-            count : $(this).find('.number').val()
+            id: $(this).data('id'),
+            count: $(this).find('.number').val()
         });
     });
     console.log(items);
-    $.post('/ajax/updateCart', {items : items}, function(){});
+    $.post('/ajax/updateCart', {items: items}, function () {
+    });
 }
 
 function deleteAllCart()
@@ -211,15 +250,16 @@ function addProduct(id, count, detail)
                 if (obj.error == 0)
                 {
                     var sum = 0;
-                    for(var k = 0; k < obj.cart.length; ++k)
+                    for (var k = 0; k < obj.cart.length; ++k)
                     {
-                        sum += parseFloat(obj.cart[k].price) * parseInt(obj.cart[k].count);
+                        sum += parseFloat(obj.cart[k].price) * parseInt(
+                                obj.cart[k].count);
                     }
                     $('.cart-count').text(obj.cart.length + ' шт.');
                     //$('.cart-block .cart-sum').text(sum);
-                    
+
                     alert('Товар добавлен в корзину');
-                    
+
                 } else if (obj.error == 2) {
                     if (obj.status == 0)
                         showAlert('Ошибка',
@@ -244,12 +284,13 @@ function addProduct(id, count, detail)
 
 function showAlert(title, message)
 {
+    alert(title + '! ' + message);/*
     if ($alertDialog && $alertDialog.length > 0) {
         $alertDialog.find('.dialog-title').html(title);
         $alertDialog.find('.dialog-content').html(message);
         $alertDialog.dialog('open');
     } else {
-        alert(title + '! ' + message);
-    }
+        
+    }*/
 }
-    
+ 

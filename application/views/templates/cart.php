@@ -29,14 +29,17 @@
 <section class="form-order container">
     <h1>Форма заказа</h1>
     <div class="enter-data">
-        <input type="text" name="" placeholder="Имя" class="text"/>
-        <input type="text" name="" placeholder="E-mail" class="text"/>
-        <input type="text" name="" placeholder="Адрес*" class="text"/>
-        <input type="text" name="" placeholder="Телефон*" class="text"/>
-        <input type="text" name="" placeholder="Курьерская доставка г.Моска" class="text address"/>
-        <input type="text" name="" placeholder="Наличными курьеру" class="text address"/>
-        <textarea name="" placeholder="Комментарий к заказу" class="text"></textarea>
-        <input type="submit" value="Оформить заказ" class="button"/>
+        <div class="alert alert-danger" style="display: none"></div>
+        <form action="" method="POST">
+            <input type="text" name="name" placeholder="Имя*" class="text" value="<?=$_SESSION['user']['name']; ?>"/>
+            <input type="text" name="email" placeholder="E-mail*" class="text" value="<?=$_SESSION['user']['email']; ?>"/>
+            <input type="text" name="address" placeholder="Адрес*" class="text" value="<?=$_SESSION['user']['address']; ?>"/>
+            <input type="text" name="phone" placeholder="Телефон*" class="text" value="<?=$_SESSION['user']['phone']; ?>"/>
+            <input type="text" name="delivery" placeholder="Курьерская доставка г.Моска" class="text address" value="<?=$_SESSION['user']['delivery']; ?>"/>
+            <input type="text" name="payment" placeholder="Наличными курьеру" class="text address" value="<?=$_SESSION['user']['payment']; ?>"/>
+            <textarea name="comment" placeholder="Комментарий к заказу" class="text"></textarea>
+            <input type="submit" value="Оформить заказ" class="button"/>
+        </form>
     </div>
     <div class="details">
         <?=$about['content']; ?>

@@ -198,14 +198,6 @@ class Cart extends Controller {
         } else {
             
             $cart = $this->getCart();
-            foreach ($cart as $cart_item) {
-                if(!$cart_item['is_on_stock']) {
-                    $result['error'] = 'Извините, товара ' . $cart_item['name'] . ' уже нет на складе';
-                    $result['status'] = -2;
-                     return $result;
-                }
-            } 
-            
             $user_data = $this->input->post(NULL, TRUE);
             $_SESSION['user'] = $user_data;
             $is_mail = $this->load->module('mail')->sendPurchase($user_data, $cart);
@@ -215,7 +207,7 @@ class Cart extends Controller {
                 $result['error'] = false;
                 $this->deleteAllCart();
             } else {
-                $result['error'] = 'Произошла ошибка во время отправки заказа на почтовый ящик. Обновите страницу и повторите операцию!';
+                $result['error'] = 'Произошла ошибка во время отправки заказа на почтовый ящик. Попробуйте повторить операцию!';
                 $result['status'] = -3;
             }
         }
@@ -264,8 +256,13 @@ class Cart extends Controller {
         $config = array(
             array(
                 'field' => 'name',
-                'label' => 'Имя получателя (ФИО)',
-                'rules' => 'trim|required|min_length[4]|max_length[255]|xss_clean'
+                'label' => 'Имя получателя',
+                'rules' => 'trim|required|min_length[2]|max_length[255]|xss_clean'
+            ),
+            array(
+                'field' => 'email',
+                'label' => 'Электронный адрес',
+                'rules' => 'trim|required|valid_email|xss_clean'
             ),
             array(
                 'field' => 'phone',
@@ -273,8 +270,8 @@ class Cart extends Controller {
                 'rules' => 'trim|required|min_length[6]|max_length[255]|xss_clean'
             ),
             array(
-                'field' => 'city',
-                'label' => 'Город',
+                'field' => 'address',
+                'label' => 'Адрес',
                 'rules' => 'trim|required|xss_clean|min_length[2]|max_length[255]'
             ),
             array(
@@ -283,29 +280,9 @@ class Cart extends Controller {
                 'rules' => 'trim|required|xss_clean'
             ),
             array(
-                'field' => 'street',
-                'label' => 'Улица',
-                'rules' => 'trim|required|xss_clean'
-            ),
-            array(
-                'field' => 'house',
-                'label' => 'Дом',
-                'rules' => 'trim|required|xss_clean'
-            ),
-            array(
-                'field' => 'room',
-                'label' => 'Квартира',
-                'rules' => 'trim|xss_clean'
-            ),
-            array(
-                'field' => 'pay',
+                'field' => 'payment',
                 'label' => 'Оплата',
                 'rules' => 'trim|required|xss_clean'
-            ),
-            array(
-                'field' => 'email',
-                'label' => 'Электронный адрес',
-                'rules' => 'trim|required|valid_email|xss_clean'
             ),
             array(
                 'field' => 'comment',

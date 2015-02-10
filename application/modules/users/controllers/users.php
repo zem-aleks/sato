@@ -112,15 +112,14 @@ class Users extends Controller {
         
     }
 
-    function addUser($name, $phone, $email, $id_level = '', $id_school = '', $status = 1) {
+    function addUser($name, $phone, $email, $address = '', $status = 1) {
         $idUser = 0;
         $userData = array(
             'name' => $name,
             'phone' => $phone,
             'email' => $email,
             'status' => $status,
-            'id_level' => $id_level,
-            'id_school' => $id_school
+            'address' => $address
         );
         $this->db->select('ID');
         $this->db->where('email', $email);
