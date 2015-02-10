@@ -1,40 +1,57 @@
-<section class="main-slider">
-    <ul class="slides container">
-        <li>
-            <div class="item-decription">
-                <div class="item-category">Электронное биде</div>
-                <a href="" class="item-name"><span class="brand">Sato</span> DB300</a>
-                <div class="item-details">
-                    <p>
-                        Модель класса "Комфорт"<br>
-                        4 режима работы<br>
-                        12 функций
-                    </p>
+<section class="top-slider">
+    <div class="container main-slider">
+        <ul class="main-slides">
+            <? for($k = 0; $k < 2; ++$k): ?>
+            <li>
+                <div class="item-decription">
+                    <div class="item-category">Электронное биде</div>
+                    <a href="" class="item-name"><span class="brand">Sato</span> DB300</a>
+                    <div class="item-details">
+                        <p>
+                            Модель класса "Комфорт"<br>
+                            4 режима работы<br>
+                            12 функций
+                        </p>
+                    </div>
+                    <div class="price">20 990<span class="rub">Р</span></div>
+                    <div class="button">КУПИТЬ</div>
                 </div>
-                <div class="price">20 990<span class="rub">Р</span></div>
-                <div class="button">КУПИТЬ</div>
-            </div>
-            
-            <div class="item-gallery">
-                <div class="thumbs gallery-slider">
-                    <ul class="slides">
-                        <li class="pic">
-                            <img src="/uploads/products/original/f4270a139af90af1496cfbb63a8e50f8.jpg" alt="" />
-                        </li>
-                        <li class="pic">
-                            <img src="/uploads/products/original/f4270a139af90af1496cfbb63a8e50f8.jpg" alt="" />
-                        </li>
-                    </ul>
-                    <ul class="flex-control-nav">
-                        <li style="background-image: url(/uploads/products/thumb/f4270a139af90af1496cfbb63a8e50f8.jpg)"></li>
-                        <li style="background-image: url(/uploads/products/thumb/f4270a139af90af1496cfbb63a8e50f8.jpg)"></li>
-                    </ul>
+
+                <div class="item-gallery">
+                    <div class="thumbs gallery-slider">
+                        <ul class="slides">
+                            <li class="pic">
+                                <img src="/uploads/products/original/f4270a139af90af1496cfbb63a8e50f8.jpg" alt="" />
+                                <div class="tizers">
+                                    <div class="tizer" style="left: 20px; top: 20px;">
+                                        <div class="tizer-msg">
+                                            <div class="tizer-title">Информационное табло</div>
+                                            Показывает какой режим включен, а так же помогает 
+                                            лучше ориентироваться в полезных функциях устройства
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="pic">
+                                <img src="/uploads/products/original/f4270a139af90af1496cfbb63a8e50f8.jpg" alt="" />
+                            </li>
+                        </ul>
+                        <ul class="flex-control-nav">
+                            <li style="background-image: url(/uploads/products/thumb/f4270a139af90af1496cfbb63a8e50f8.jpg)"></li>
+                            <li style="background-image: url(/uploads/products/thumb/f4270a139af90af1496cfbb63a8e50f8.jpg)"></li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="clear"></div>
-        </li>
-    </ul>
+
+                <div class="clear"></div>
+            </li>
+            <? endfor; ?>
+        </ul>
+        <ul class="main-control-nav">
+            <li>DB300</li>
+            <li>DB400</li>
+        </ul>
+    </div>
 </section>
 <section class="desk">
     <div class="container">
@@ -51,23 +68,6 @@
         <div class="heading">МОДЕЛИ</div>
         <div class="products flexslider">
             <ul class="slides">
-                <li>
-                    <? foreach ($models as $key => $model): ?>
-                    
-                        <? if($key > 0 && $key % 3 == 0):?>
-                            </li><li>
-                        <? endif;?>
-                    
-                        <a href="/products/view/<?=$model['chpu'];?>" class="item">
-                            <div class="pic">
-                                <img src="/uploads/products/thumb/<?=$model['image'];?>" alt="<?=$model['name'];?>" />
-                            </div>
-                            <div class="model"><?=$model['brand']['name'];?> <span><?=$model['name'];?></span></div>
-                            <div class="price"><?=(int)$model['price'];?></div>
-                        </a>
-                    
-                    <? endforeach; ?>
-                </li>
                 <li>
                     <? foreach ($models as $key => $model): ?>
                     

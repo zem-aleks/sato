@@ -13,13 +13,26 @@ $(document).ready(function() {
         nextText: "",
     });
     
-    $('.gallery-slider').flexslider({
-        slideshow : true,
+    $('.gallery-slider').each(function(){
+        var $this = $(this);
+        $this.flexslider({
+            slideshow : false,
+            animation : 'slide',
+            prevText: "",
+            nextText: "",
+            manualControls : $this.find('.flex-control-nav li'),
+        });
+    });
+    
+    $('.main-slider').flexslider({
+        slideshow : false,
         animation : 'slide',
         prevText: "",
         nextText: "",
-        manualControls : '.flex-control-nav li',
-    })
+        manualControls : '.main-control-nav li',
+        selector : '.main-slides > li',
+        directionNav: false,  
+    });
     
     $('.view-more').click(function(){
         var $this = $(this);
