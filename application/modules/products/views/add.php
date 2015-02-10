@@ -1,5 +1,6 @@
 <?= show_editor('#content') ?>
 <?= show_editor('#short') ?>
+<?= show_editor('#slider_desc') ?>
 
 <div class="title"><?= $title; ?></div>
 <?= form_open_multipart($form_action, array('name' => 'editform')); ?>
@@ -35,14 +36,22 @@
 <br /><br />
 <label>
     <input name="on_main" type="checkbox" <? if($page['on_main']):?>checked="checked"<? endif;?>/>
-    Показывать на главной странице?
+    Показывать модель главной странице в моделях?
+</label>
+<br /><br />
+<label>
+    <input name="on_slider" type="checkbox" <? if($page['on_slider']):?>checked="checked"<? endif;?>/>
+    Добавить модель в слайдер на главной странице?
 </label>
 <br /><br />
 
-Краткое описание товара:<br />
+Краткое описание товара на слайдере:<br />
+<textarea id="slider_desc" rows="5" name="slider_desc"><?= set_value('slider_desc', $page['slider_desc']) ?></textarea><br /><br />
+
+Краткое описание товара (описание с правой стороны):<br />
 <textarea id="short" rows="5" name="short"><?= set_value('short', $page['short']) ?></textarea><br /><br />
 
-Детальное описание товара:<br />
+Детальное описание товара (таблица с техническими характеристиками и т.д.):<br />
 <textarea id="content" name="content"><?= set_value('content', $page['content']) ?></textarea><br /><br />
 
 ЧПУ (Если оставить пустым,то по названию построится автоматически.)<br />

@@ -6,5 +6,5 @@
         <div class="model"><span><?= $product['brand']['name']; ?></span> <span><?= $product['name']; ?></span></div>
         <div class="price"><?= (int) $product['price']; ?></div>
     </a>
-    <a href="" class="details">Подробнее о модели</a>
+    <a href="/products/view/<?= $product['chpu']; ?>" class="details">Подробнее о модели</a>
 </div>

@@ -13,13 +13,40 @@ $(document).ready(function() {
         nextText: "",
     });
     
-    $('.gallery-slider').flexslider({
-        slideshow : true,
+    $('.gallery-slider').each(function(){
+        var $this = $(this);
+        $this.flexslider({
+            slideshow : false,
+            animation : 'slide',
+            prevText: "",
+            nextText: "",
+            manualControls : $this.find('.flex-control-nav li'),
+        });
+    });
+    
+    var mainSlider = $('.main-slider').flexslider({
+        slideshow : false,
         animation : 'slide',
         prevText: "",
         nextText: "",
-        manualControls : '.flex-control-nav li',
-    })
+        manualControls : '.main-control-nav li',
+        selector : '.main-slides > li',
+        directionNav: false,  
+    }).data('flexslider');
+    
+    function nextSlide()
+    {
+        var total = $('.main-slider .main-control-nav li').length;
+        var index = $('.main-slider .main-control-nav .flex-active').index();
+        mainSlider.flexAnimate((index+1) % total);
+    }
+    
+    function prevSlide()
+    {
+        var total = $('.main-slider .main-control-nav li').length;
+        var index = $('.main-slider .main-control-nav .flex-active').index();
+        mainSlider.flexAnimate((index-1) % total);
+    }
     
     $('.view-more').click(function(){
         var $this = $(this);
