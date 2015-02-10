@@ -75,7 +75,7 @@
     <div class="clear"></div>
     <div class="contain"><a href="" class="view-more">Еще ассортимент</a></div>
     <div class="clear"></div>
-    <a href="" class="sort">Сортировка: <span>По ценам</span></a>
+    <a href="#" class="sort">Сортировка: <span>По ценам</span></a>
 </section>
 <section class="compare">
     <div class="container">
