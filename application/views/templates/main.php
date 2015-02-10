@@ -11,28 +11,55 @@
 <section class="models">
     <div class="container">
         <div class="heading">МОДЕЛИ</div>
-        <div class="products">
-            <a href="" class="item">
-                <div class="pic">
-                    <img src="/images/front/cover.png" alt="cover" />
-                </div>
-                <div class="model">SATO <span>DB300</span></div>
-                <div class="price">20 900</div>
-            </a>
-            <a href="" class="item">
-                <div class="pic">
-                    <img src="/images/front/cover.png" alt="cover" />
-                </div>
-                <div class="model"><SATO <span>DB400</span></div>
-                <div class="price">30 900</div>
-            </a>
-            <a href="" class="item">
-                <div class="pic">
-                    <img src="/images/front/cover.png" alt="cover" />
-                </div>
-                <div class="model">SATO <span>DB500</span></div>
-                <div class="price">50 900</div>
-            </a>
+        <div class="products flexslider">
+            <ul class="slides">
+                <li>
+                    <a href="" class="item">
+                        <div class="pic">
+                            <img src="/images/front/cover.png" alt="cover" />
+                        </div>
+                        <div class="model">SATO <span>DB300</span></div>
+                        <div class="price">20 900</div>
+                    </a>
+                    <a href="" class="item">
+                        <div class="pic">
+                            <img src="/images/front/cover.png" alt="cover" />
+                        </div>
+                        <div class="model"><SATO <span>DB400</span></div>
+                        <div class="price">30 900</div>
+                    </a>
+                    <a href="" class="item">
+                        <div class="pic">
+                            <img src="/images/front/cover.png" alt="cover" />
+                        </div>
+                        <div class="model">SATO <span>DB500</span></div>
+                        <div class="price">50 900</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="item">
+                        <div class="pic">
+                            <img src="/images/front/cover.png" alt="cover" />
+                        </div>
+                        <div class="model">SATO <span>DB300</span></div>
+                        <div class="price">20 900</div>
+                    </a>
+                    <a href="" class="item">
+                        <div class="pic">
+                            <img src="/images/front/cover.png" alt="cover" />
+                        </div>
+                        <div class="model"><SATO <span>DB400</span></div>
+                        <div class="price">30 900</div>
+                    </a>
+                    <a href="" class="item">
+                        <div class="pic">
+                            <img src="/images/front/cover.png" alt="cover" />
+                        </div>
+                        <div class="model">SATO <span>DB500</span></div>
+                        <div class="price">50 900</div>
+                    </a>
+                </li>
+            </ul>
         </div>
     </div>
 </section>
@@ -174,9 +201,9 @@
 </section>
 <section class="about">
     <div class="container">
-        <div class="heading"><?=$about['name'];?></div>
+        <div class="heading"><?= $about['name']; ?></div>
         <div class="text">
-            <?=$about['short'];?>
+            <?= $about['short']; ?>
             <a href="/page/about" class="more"><span>еще о бренде</span> &darr;</a>
         </div>
         <a href="#" class="up">Наверх</a>

@@ -7,8 +7,10 @@ $(document).ready(function() {
     });
     
     $('.flexslider').flexslider({
-        slideshow : false,
-        animation : 'slide'
+        slideshow : true,
+        animation : 'slide',
+        prevText: "",
+        nextText: "",
     });
     
     $('.view-more').click(function(){
