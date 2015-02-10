@@ -3,7 +3,7 @@
     <? $sum = 0; ?>
     <? foreach ($cart as $product): ?>
     <? $sum += $product['count'] * $product['original_price']; ?>
-    <div class="product">
+    <div class="product" data-id="<?=$product['ID'];?>" data-price="<?=$product['original_price']; ?>">
         <div class="item">
             <a href="/products/view/<?=$product['chpu'];?>">
                 <div class="pic">
@@ -17,14 +17,14 @@
         </div>
         <div class="quantity">
             <div>Количество:</div>
-            <input type="text" number="" class="number" value="<?=$product['count'];?>"/>
+            <input type="number" class="number" value="<?=$product['count'];?>"/>
             <div class="price"><?=$product['price'];?> Р</div>
         </div>
-        <a href="" class="close">х</a>
+        <a href="javascript:void(0);" class="close product-remove">х</a>
     </div>
     <? endforeach; ?>
     
-    <div class="total">Общая сумма: <span class="price"><?=number_format((int)$sum, 0, ',', ' ');?> Р</span></div>
+    <div class="total">Общая сумма: <span class="price"><span class="cart-sum"><?=number_format((int)$sum, 0, ',', ' ');?></span> Р</span></div>
 </section>
 <section class="form-order container">
     <h1>Форма заказа</h1>

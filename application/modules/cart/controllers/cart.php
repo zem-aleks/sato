@@ -24,8 +24,11 @@ class Cart extends Controller {
         $content['title'] = $content['info']['title'];
         $content['description'] = $content['info']['mdesc'];
         $content['keywords'] = $content['info']['mkeys'];
+        
+        $content['breadcrumbs'][] = array('url' => '/cart' , 'name' => 'Корзина');
 
         $this->load->view('templates/header', $content);
+        $this->load->view('templates/breadcrumbs', $content);
         $this->load->view('templates/cart', $content);
         $this->load->view('templates/footer', $content);
     }
@@ -154,14 +157,6 @@ class Cart extends Controller {
         $cart = $this->getCart();
         if(empty($cart))
             return false;
-        
-        foreach ($cart as $cart_item) {
-            if (!(bool) $cart_item['is_on_stock']) {
-                $this->db->where('id_item', $cart_item['ID']);
-                $this->db->where('token', $_SESSION['cart']);
-                $this->db->delete('cart');
-            }
-        }
         
         foreach ($items as $item)
         {

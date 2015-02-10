@@ -85,10 +85,41 @@ $(document).ready(function () {
         var count = 1;
         addProduct(id, count, null);
     });
+    
+    $('.product-remove').click(function(){
+        var $row = $(this).closest('.product');
+        var id = $row.data('id');
+        deleteFromCart(id, $row);
+    });
+    
+    
+    $('.cart .number').change(function(){
+        if(isNaN( $(this).val()) || $(this).val() <= 0)
+             $(this).val(1);
+        var sum = 0.;
+        $('.cart .product').each(function(){
+            sum += parseInt($(this).data('price') * $(this).find('.number').val());
+        });
+        updateCart();
+        $('.cart-sum').text(sum);
+    });
 });
 
-
 // ---- functions to work with cart ----//
+
+function updateCart()
+{
+    var items = [];
+    $('.cart .product').each(function () {
+        items.push({
+            id : $(this).data('id'),
+            count : $(this).find('.number').val()
+        });
+    });
+    console.log(items);
+    $.post('/ajax/updateCart', {items : items}, function(){});
+}
+
 function deleteAllCart()
 {
     $.ajax({
@@ -140,15 +171,14 @@ function deleteFromCart(id, $row)
 
                     var sum = 0.;
                     for (var k = 0; k < obj.cart.length; ++k)
-                        sum += parseFloat(obj.cart[k].price
+                        sum += parseInt(obj.cart[k].original_price
                                 * obj.cart[k].count);
-                    $('.cart-block .cart-count').text(obj.cart.length);
-                    $('.cart-block .cart-sum').text(sum);
-                    $('.cart .total-price').text(sum + ' грн.');
+                    $('.cart-count').text(obj.cart.length + ' шт.');
+                    $('.cart-sum').text(sum);
                 }
 
                 if (obj.cart.length == 0) {
-                    //$('.but').hide();
+                    $('.cart-count').text('пусто');
                 }
 
             }

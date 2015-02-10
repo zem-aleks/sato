@@ -1132,13 +1132,14 @@ section.form-order {
     margin-bottom: 6px;
 }
 .cart .product .quantity .number {
-    width: 50px;
+    width: 40px;
     border: 1px solid #eaeff0;
     font-weight: bold;
     line-height: 48px;
     text-align: center;
     border-radius: 3px;
     font-size: 18px;
+    padding-left: 10px;
 }
 .cart .product .quantity .price {
     font-size: 24px;
