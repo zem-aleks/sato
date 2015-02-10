@@ -215,7 +215,7 @@ section.models .heading {
 }
 section.models .products {
     text-align: center;
-    
+
 }
 .item {
     width: 200px;
@@ -414,7 +414,7 @@ h1 {
 .contact-page .contacts p.address {
     margin-top: 35px;
 }
-.text {
+.form-order .text {
     width: 353px;
     margin-bottom: 20px;
     border: 1px solid #eaeff0;
@@ -642,19 +642,19 @@ footer .btm-line .copyright .about {
     text-decoration: none;
     background-color: #FCD45B;
     background-image: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    color-stop(0.1, #FCD45B),
-    color-stop(1, #FFE186)
-);
-background-image: -o-linear-gradient(bottom, #FCD45B 10%, #FFE186 100%);
-background-image: -moz-linear-gradient(bottom, #FCD45B 10%, #FFE186 100%);
-background-image: -webkit-linear-gradient(bottom, #FCD45B 10%, #FFE186 100%);
-background-image: -ms-linear-gradient(bottom, #FCD45B 10%, #FFE186 100%);
-background-image: linear-gradient(to bottom, #FCD45B 10%, #FFE186 100%);
--webkit-border-radius: 8px;
--moz-border-radius: 8px;
+        linear,
+        left top,
+        left bottom,
+        color-stop(0.1, #FCD45B),
+        color-stop(1, #FFE186)
+        );
+    background-image: -o-linear-gradient(bottom, #FCD45B 10%, #FFE186 100%);
+    background-image: -moz-linear-gradient(bottom, #FCD45B 10%, #FFE186 100%);
+    background-image: -webkit-linear-gradient(bottom, #FCD45B 10%, #FFE186 100%);
+    background-image: -ms-linear-gradient(bottom, #FCD45B 10%, #FFE186 100%);
+    background-image: linear-gradient(to bottom, #FCD45B 10%, #FFE186 100%);
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
 
     border-radius: 2px;
 }
@@ -1078,6 +1078,7 @@ section.catalog-info {
 }
 .item-details img {              
     box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.2);
+}
 header .top-line .cart:hover {
     background-color: #ef444c;
     border: 1px solid transparent;
@@ -1201,4 +1202,13 @@ textarea.text {
 }
 .form-order .enter-data .address {
     background: url(/images/front/arrowdown.png) 340px 18px no-repeat;
+}
+.advantages .details {
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    text-align: left;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 23px;
 }
