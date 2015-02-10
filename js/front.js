@@ -13,6 +13,14 @@ $(document).ready(function() {
         nextText: "",
     });
     
+    $('.gallery-slider').flexslider({
+        slideshow : true,
+        animation : 'slide',
+        prevText: "",
+        nextText: "",
+        manualControls : '.flex-control-nav li',
+    })
+    
     $('.view-more').click(function(){
         var $this = $(this);
         if($this.hasClass('processing'))

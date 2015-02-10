@@ -845,7 +845,7 @@ section.catalog-info {
     line-height: 30px;
     list-style: disc;
 }
-.catalog-info .description .button {
+.button {
     width: 260px;
     font-size: 20px;
     height: 50px;
@@ -854,8 +854,9 @@ section.catalog-info {
     line-height: 50px;
     margin-top: 25px;
     border-radius: 3px;
+    cursor: pointer;
 }
-.catalog-info .description .price {
+.catalog-info .description .price, .item-decription .price {
     color: #ff535a;
     font-size: 48px;
     margin-top: 40px;
@@ -902,4 +903,57 @@ section.catalog-info {
     left: auto;
     right: 0;
     background-position: -31px 0px;
+}
+.main nav.main {
+    background: #fff;
+}
+
+.main-slider {
+    background-image: -webkit-gradient( linear, left top, left bottom, color-stop(0, #F6F6F6), color-stop(0.5, #FAFAFA), color-stop(1, #F6F6F6) );  background-image: -o-linear-gradient(bottom, #F6F6F6 0%, #FAFAFA 50%, #F6F6F6 100%);  background-image: -moz-linear-gradient(bottom, #F6F6F6 0%, #FAFAFA 50%, #F6F6F6 100%);  background-image: -webkit-linear-gradient(bottom, #F6F6F6 0%, #FAFAFA 50%, #F6F6F6 100%);  background-image: -ms-linear-gradient(bottom, #F6F6F6 0%, #FAFAFA 50%, #F6F6F6 100%);  background-image: linear-gradient(to bottom, #F6F6F6 0%, #FAFAFA 50%, #F6F6F6 100%);
+}
+.item-category {
+    font-size: 24px;
+}
+
+.main-slider > .slides {
+    padding: 40px 0;
+}
+
+.item-name {
+    font-size: 58px;
+    text-transform: uppercase;
+    display: block;
+    margin-top: 5px;
+    font-family: Roboto Light;
+}
+
+.item-name .brand {
+    font-family: Roboto Bold;
+}
+
+.item-details {
+    margin-top: 14px;
+    line-height: 24px;
+    font-size: 16px;
+}
+.item-decription {
+    float: left;
+    width: 340px;
+    margin-right: 75px;
+}
+
+.item-gallery {
+    float: left;
+    width: 370px;
+    position: relative;
+}
+.item-gallery .flex-direction-nav a.flex-prev{
+    left: -35px;
+}
+.item-gallery .flex-direction-nav a.flex-next{
+    right: -30px;
+}
+.pic img {
+    max-width: 100%;
+    max-height: 100%;
 }

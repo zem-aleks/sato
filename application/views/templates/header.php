@@ -32,7 +32,7 @@
             <div class="backend"><a href="/admin">Перейти в админку</a></div>
         <? endif; ?>
             
-            <div class="main-wrapper">
+            <div class="main-wrapper <?=$page;?>">
                 <header>
                     <div class="container">
                         <div class="top-line">

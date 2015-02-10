@@ -18,8 +18,7 @@
             <li>Режим Клизмы</li>
             <li>Энергосберегающий режим</li>
         </ul>
-        <div class="price">20 990<span class="rub">Р</span>
-        </div>
+        <div class="price">20 990<span class="rub">Р</span></div>
         <div class="button">КУПИТЬ</div>
     </div>
     <div class="clear"></div>

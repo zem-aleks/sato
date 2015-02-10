@@ -1,3 +1,42 @@
+<section class="main-slider">
+    <ul class="slides container">
+        <li>
+            <div class="item-decription">
+                <div class="item-category">Электронное биде</div>
+                <a href="" class="item-name"><span class="brand">Sato</span> DB300</a>
+                <div class="item-details">
+                    <p>
+                        Модель класса "Комфорт"<br>
+                        4 режима работы<br>
+                        12 функций
+                    </p>
+                </div>
+                <div class="price">20 990<span class="rub">Р</span></div>
+                <div class="button">КУПИТЬ</div>
+            </div>
+            
+            <div class="item-gallery">
+                <!--<div class="pic"><img src="/uploads/products/thumb/f4270a139af90af1496cfbb63a8e50f8.jpg" alt="" /></div>-->
+                <div class="thumbs gallery-slider">
+                    <ul class="slides">
+                        <li class="pic">
+                            <img src="/uploads/products/original/f4270a139af90af1496cfbb63a8e50f8.jpg" alt="" />
+                        </li>
+                        <li class="pic">
+                            <img src="/uploads/products/original/f4270a139af90af1496cfbb63a8e50f8.jpg" alt="" />
+                        </li>
+                    </ul>
+                    <ul class="flex-control-nav">
+                        <li style="background-image: url(/uploads/products/thumb/f4270a139af90af1496cfbb63a8e50f8.jpg)"></li>
+                        <li style="background-image: url(/uploads/products/thumb/f4270a139af90af1496cfbb63a8e50f8.jpg)"></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="clear"></div>
+        </li>
+    </ul>
+</section>
 <section class="desk">
     <div class="container">
         <div class="heading">SATO ЭТО</div>
