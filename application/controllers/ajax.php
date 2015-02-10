@@ -93,12 +93,12 @@ class Ajax extends Controller
             $id = (int)  $this->input->post('id', TRUE);
             $count = (int) $this->input->post('count', TRUE);
             $detail = $this->input->post('detail', TRUE);
-            $item = $this->load->module('item')->getItemById($id);
-            if($item && $item['is_on_stock'] > 0) {
+            $item = $this->load->module('products')->getEntryById($id);
+            if($item) {
                 $cart = $this->load->module('cart')->addToCart($id, $count, $detail);
             } else {
                 $result['error'] = 2; // no product in stock
-                $result['status'] = $item['is_on_stock'];
+                //$result['status'] = $item['is_on_stock'];
             }
             
             $result['cart'] = $cart;

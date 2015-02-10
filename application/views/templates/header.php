@@ -38,7 +38,15 @@
                         <div class="top-line">
                             <!--<div class="sign-up">Вход</div>
                             <div class="sign-in">Регистрация</div>-->
-                            <a href="/cart" class="cart">Корзина: пусто</a>
+                            <a href="/cart" class="cart">Корзина: 
+                                <span class="cart-count">
+                                    <? if($cart && count($cart) > 0): ?>
+                                        <?=count($cart);?> шт.
+                                    <? else: ?>
+                                    пусто
+                                    <? endif;?>
+                                </span>
+                            </a>
                         </div>
                         <div class="btm-line">
                             <a href="/" class="logo-main">ЖИВИ С КОМФОРТОМ</a>

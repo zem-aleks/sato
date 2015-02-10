@@ -1102,9 +1102,9 @@ header .top-line .cart:hover {
 .cart .product .pic {
     width: 80px;
     height: 100px;
-    background-color: #e3e3e3;
     float: left;
     margin-right: 20px;
+    line-height: 100px;
 }
 .cart .product .quantity {
     width: 380px;
@@ -1291,4 +1291,7 @@ textarea.text {
 }
 .flex-control-nav li:last-child {
     margin-right: 0px;
+}
+.cart .product .pic img {
+    vertical-align: middle;
 }

@@ -40,8 +40,8 @@ class Products extends ModuleController {
         $entry['brand'] = $this->load->module('dictionary')->getValue($entry['id_brand']);
         $entry['category'] = $this->load->module('dictionary')->getValue($entry['id_category']);
         $entry['date'] = modifyDate($entry['date']);
+        $entry['original_price'] = $entry['price'];
         $entry['price'] = number_format((int)$entry['price'], 0, ',', ' ');
-        //($number, 2, ',', ' ');
         return $entry;
     }
     

@@ -18,18 +18,23 @@ class Mdl_cart extends Model {
         {
             $this->db->select('c1.count, c1.detail, c1.date, c2.*');
             $this->db->from(self::$table . ' as c1');
-            $this->db->join('item as c2', 'c2.ID = c1.id_item');
+            $this->db->join('products as c2', 'c2.ID = c1.id_item');
             $this->db->where('c1.token', $token);
             $this->db->order_by('c1.date', 'DESC');
             $query = $this->db->get();
-            return $query->result_array();
+            $items = $query->result_array();
+            foreach ($items as &$item) {
+                $item = $this->load->module('products')->modifyEntry($item);
+            }
+            
+            return $items;
         }
         
         function getLastItem($token)
         {
             $this->db->select('c1.count, c1.detail, c1.date, c2.*');
             $this->db->from(self::$table . ' as c1');
-            $this->db->join('item as c2', 'c2.ID = c1.id_item');
+            $this->db->join('products as c2', 'c2.ID = c1.id_item');
             $this->db->where('c1.token', $token);
             $this->db->order_by('c1.date', 'DESC');
             $this->db->limit(1);
