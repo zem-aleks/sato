@@ -1078,7 +1078,6 @@ section.catalog-info {
 }
 .item-details img {              
     box-shadow: 8px 5px 15px 0px rgba(0,0,0,0.2);
-    box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.2);
 }
 header .top-line .cart:hover {
     background-color: #ef444c;
@@ -1289,4 +1288,7 @@ textarea.text {
     padding-right: 30px;
     background: url(/images/front/pdf.png) no-repeat right top;
     margin-top: 4px;
+}
+.flex-control-nav li:last-child {
+    margin-right: 0px;
 }
