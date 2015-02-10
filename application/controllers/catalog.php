@@ -30,6 +30,7 @@ class Catalog extends Controller {
             'category' => $idCategory,
             'order' => $order,
         );
+        $content['breadcrumbs'][] = array('url' => '/catalog' , 'name' => 'Продукция');
 
         $this->load->view('templates/header', $content);
         $this->load->view('templates/breadcrumbs', $content);

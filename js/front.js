@@ -13,8 +13,9 @@ $(document).ready(function() {
     
     $('.view-more').click(function(){
         var $this = $(this);
-        if($(this).hasClass('processing'))
-            return;
+        if($this.hasClass('processing'))
+            return false;
+        $this.addClass('processing');
         var start = $('.item').length;
         var limit = 6;
         var category = $('.catalog').data('id');
@@ -30,11 +31,11 @@ $(document).ready(function() {
                 } else {
                     $this.remove();
                 }
-                $(this).removeClass('processing');
+                $this.removeClass('processing');
             },
             error: function () {
                 alert('Server error');
-                $(this).removeClass('processing');
+                $this.removeClass('processing');
             }
         });
         return false;
