@@ -824,12 +824,6 @@ section.catalog-info h1 span {
     height: 450px;
     margin-bottom: 10px;
 }
-.catalog-info .gallery .pic img {
-    max-width: 100%;
-    max-height: 100%;
-    text-align: center;
-    vertical-align: middle;
-}
 .catalog .sort.desc {
     background-position: 140px -8px;
 }
@@ -840,6 +834,7 @@ section.catalog-info h1 span {
 }
 section.catalog-info {
     padding-top: 14px;
+    padding-bottom: 80px;
 }
 .catalog-info .description li {
     line-height: 30px;
@@ -863,6 +858,7 @@ section.catalog-info {
 }
 .catalog-info .description ul {
     margin-left: 18px;
+    margin-bottom: 206px;
 }
 .rub {
     display: inline-block;
@@ -882,7 +878,6 @@ section.catalog-info {
 .flex-control-nav.flex-control-paging {
     display: none;
 }
-
 .flex-direction-nav a {
     position: absolute;
     left: 0px;
@@ -895,11 +890,9 @@ section.catalog-info {
     height: 50px;
     cursor: pointer;
 }
-
 .flexslider {
     position: relative;
 }
-
 .flex-direction-nav a.flex-next {
     left: auto;
     right: 0;
@@ -908,18 +901,15 @@ section.catalog-info {
 .main nav.main {
     background: #fff;
 }
-
 .main-slider {
     background-image: -webkit-gradient( linear, left top, left bottom, color-stop(0, #F6F6F6), color-stop(0.5, #FAFAFA), color-stop(1, #F6F6F6) );  background-image: -o-linear-gradient(bottom, #F6F6F6 0%, #FAFAFA 50%, #F6F6F6 100%);  background-image: -moz-linear-gradient(bottom, #F6F6F6 0%, #FAFAFA 50%, #F6F6F6 100%);  background-image: -webkit-linear-gradient(bottom, #F6F6F6 0%, #FAFAFA 50%, #F6F6F6 100%);  background-image: -ms-linear-gradient(bottom, #F6F6F6 0%, #FAFAFA 50%, #F6F6F6 100%);  background-image: linear-gradient(to bottom, #F6F6F6 0%, #FAFAFA 50%, #F6F6F6 100%);
 }
 .item-category {
     font-size: 24px;
 }
-
 .main-slider > .slides {
     padding: 40px 0;
 }
-
 .item-name {
     font-size: 58px;
     text-transform: uppercase;
@@ -927,11 +917,9 @@ section.catalog-info {
     margin-top: 5px;
     font-family: Roboto Light;
 }
-
 .item-name .brand {
     font-family: Roboto Bold;
 }
-
 .item-details {
     margin-top: 14px;
     line-height: 24px;
@@ -942,7 +930,6 @@ section.catalog-info {
     width: 340px;
     margin-right: 100px;
 }
-
 .item-gallery {
     float: left;
     width: 370px;
@@ -957,6 +944,23 @@ section.catalog-info {
 .pic img {
     max-width: 100%;
     max-height: 100%;
+    text-align: center;
+}
+.tech-info table {
+    width: 100%;
+}
+.tech-info table tbody tr td {
+    text-align: left;
+    font-weight: bold;
+    font-size: 14px;
+}
+.tech-info table tr td:first-child {
+    width: 300px;
+    padding-left: 20px;
+}
+.tech-info table tbody tr {
+    height: 47px;
+    line-height: 47px;
 }
 .gallery-slider {
     padding-bottom: 50px;
