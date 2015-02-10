@@ -1203,6 +1203,9 @@ textarea.text {
 }
 .form-order .enter-data .address {
     background: url(/images/front/arrowdown.png) 340px 18px no-repeat;
+    width: 370px;
+    cursor: pointer;
+    -webkit-appearance: none;
 }
 .advantages .details {
     display: block;

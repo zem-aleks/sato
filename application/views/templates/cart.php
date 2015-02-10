@@ -35,8 +35,18 @@
             <input type="text" name="email" placeholder="E-mail*" class="text" value="<?=$_SESSION['user']['email']; ?>"/>
             <input type="text" name="address" placeholder="Адрес*" class="text" value="<?=$_SESSION['user']['address']; ?>"/>
             <input type="text" name="phone" placeholder="Телефон*" class="text" value="<?=$_SESSION['user']['phone']; ?>"/>
-            <input type="text" name="delivery" placeholder="Курьерская доставка г.Моска" class="text address" value="<?=$_SESSION['user']['delivery']; ?>"/>
-            <input type="text" name="payment" placeholder="Наличными курьеру" class="text address" value="<?=$_SESSION['user']['payment']; ?>"/>
+            <select name="delivery" class="text address">
+                <? foreach ($deliveries as $one): ?>
+                <option><?=$one;?></option>
+                <? endforeach; ?>
+            </select>
+            <select name="payment" class="text address">
+                <? foreach ($payments as $one): ?>
+                <option><?=$one;?></option>
+                <? endforeach; ?>
+            </select>
+            <!--<input type="text" name="delivery" placeholder="Курьерская доставка г.Моска" class="text address" value="<?=$_SESSION['user']['delivery']; ?>"/>-->
+            <!--<input type="text" name="payment" placeholder="Наличными курьеру" class="text address" value="<?=$_SESSION['user']['payment']; ?>"/>-->
             <textarea name="comment" placeholder="Комментарий к заказу" class="text"></textarea>
             <input type="submit" value="Оформить заказ" class="button"/>
         </form>

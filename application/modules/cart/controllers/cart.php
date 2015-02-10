@@ -18,6 +18,8 @@ class Cart extends Controller {
         $content = $this->load->module('template')->loadDefaultData();
         $content['about'] = $this->load->module('pages')->getPageCHPU('cart');
         $content['models'] = $this->load->module('products')->getFilterEntries(0, 9, 1, array('on_main' => 1), 'c1.sort');
+        $content['deliveries'] = explode("\n", $content['settings']['delivery']);
+        $content['payments'] = explode("\n", $content['settings']['payment']);
         
         $content['page'] = 'main';
         $content['info'] = $this->load->module('pages')->getPageCHPU('main');
