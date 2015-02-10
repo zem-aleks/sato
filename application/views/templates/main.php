@@ -16,7 +16,6 @@
             </div>
             
             <div class="item-gallery">
-                <!--<div class="pic"><img src="/uploads/products/thumb/f4270a139af90af1496cfbb63a8e50f8.jpg" alt="" /></div>-->
                 <div class="thumbs gallery-slider">
                     <ul class="slides">
                         <li class="pic">
@@ -52,6 +51,23 @@
         <div class="heading">МОДЕЛИ</div>
         <div class="products flexslider">
             <ul class="slides">
+                <li>
+                    <? foreach ($models as $key => $model): ?>
+                    
+                        <? if($key > 0 && $key % 3 == 0):?>
+                            </li><li>
+                        <? endif;?>
+                    
+                        <a href="/products/view/<?=$model['chpu'];?>" class="item">
+                            <div class="pic">
+                                <img src="/uploads/products/thumb/<?=$model['image'];?>" alt="<?=$model['name'];?>" />
+                            </div>
+                            <div class="model"><?=$model['brand']['name'];?> <span><?=$model['name'];?></span></div>
+                            <div class="price"><?=(int)$model['price'];?></div>
+                        </a>
+                    
+                    <? endforeach; ?>
+                </li>
                 <li>
                     <? foreach ($models as $key => $model): ?>
                     
