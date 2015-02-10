@@ -429,15 +429,16 @@ h1 {
 }
 .contact-page .write textarea.text {
     height: 128px;
-    border-radius: 2px;
+    border-radius: 3px;
     resize: none;
     margin-bottom: 25px;
+    width: 348px;
 }
 .write .contact-description {
     width: 388px;
 }
 .contact-page .write .contact-submit {
-    width: 390px;
+    width: 370px;
     background-color: #909ea9;
     border: none;
     border-radius: 2px;
@@ -1304,4 +1305,26 @@ textarea.text {
 }
 .article .text-data .title:hover {
     color: #25bbe6;
+}
+.rub-1 {
+    display: inline-block;
+    border-bottom: 3px solid;
+    line-height: 2px;
+    width: 23px;
+    height: 8px;
+    font-size: 48px;
+    box-sizing: border-box;
+}
+.rub-2 {
+    border-bottom: 2px solid;
+    line-height: 2px;
+    width: 9px;
+    height: 7px;
+    font-size: 23px;
+    font-weight: bold;
+}
+.rub-3 {
+    font-size: 24px;
+    height: 6px;
+    border-bottom: 2px solid;
 }

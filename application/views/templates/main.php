@@ -9,7 +9,7 @@
                     <div class="item-details">
                         <?=$product['slider_desc'];?>
                     </div>
-                    <div class="price"><?=$product['price'];?><span class="rub">Р</span></div>
+                    <div class="price"><?=$product['price'];?> <span class="rub-1">Р</span></div>
                     <div class="button">КУПИТЬ</div>
                 </div>
 
@@ -86,7 +86,7 @@
                                 <img src="/uploads/products/thumb/<?=$model['image'];?>" alt="<?=$model['name'];?>" />
                             </div>
                             <div class="model"><?=$model['brand']['name'];?> <span><?=$model['name'];?></span></div>
-                            <div class="price"><?=$model['price'];?></div>
+                            <div class="price"><?=$model['price'];?> <span class=" rub rub-2">P</span></div>
                         </a>
                     
                     <? endforeach; ?>
