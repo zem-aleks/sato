@@ -344,7 +344,7 @@ section.advantages .point .adv {
 }
 section.about {
     padding-top: 66px;
-    padding-bottom: 95px;
+    padding-bottom: 75px;
     position: relative;
 }
 section.about .heading {
@@ -355,6 +355,8 @@ section.about .heading {
 section.about .text {
     width: 700px;
     margin-left: 22px;
+    border: none;
+    padding: 0px;
 }
 section.about .text p {
     line-height: 21px;
@@ -414,7 +416,7 @@ h1 {
 .contact-page .contacts p.address {
     margin-top: 35px;
 }
-.form-order .text {
+.text {
     width: 353px;
     margin-bottom: 20px;
     border: 1px solid #eaeff0;
@@ -427,15 +429,16 @@ h1 {
 }
 .contact-page .write textarea.text {
     height: 128px;
-    border-radius: 2px;
+    border-radius: 3px;
     resize: none;
     margin-bottom: 25px;
+    width: 348px;
 }
 .write .contact-description {
     width: 388px;
 }
 .contact-page .write .contact-submit {
-    width: 390px;
+    width: 370px;
     background-color: #909ea9;
     border: none;
     border-radius: 2px;
@@ -718,7 +721,7 @@ section.catalog aside {
 }
 .catalog aside ul li .active {
     background-color: #fddf52;    
-    height: 18px;
+    height: 28px;
     padding-left: 12px;
     padding-right: 16px;
     line-height: 12px;
@@ -1292,6 +1295,36 @@ textarea.text {
     padding-right: 30px;
     background: url(/images/front/pdf.png) no-repeat right top;
     margin-top: 4px;
+}
+.page .contain .text {
+    width: 700px;
+    border: 0;
+}
+.view .text {
+    border: none;
+    width: 685px;
+    padding-top: 0;
+    overflow: hidden;
+}
+.article .text-data .title:hover {
+    color: #25bbe6;
+}
+.rub-1 {
+    display: inline-block;
+    border-bottom: 3px solid;
+    line-height: 2px;
+    width: 23px;
+    height: 8px;
+    font-size: 48px;
+    box-sizing: border-box;
+}
+.rub-2 {
+    border-bottom: 2px solid;
+    line-height: 2px;
+    width: 9px;
+    height: 7px;
+    font-size: 23px;
+    font-weight: bold;
 }
 .flex-control-nav li:last-child {
     margin-right: 0px;

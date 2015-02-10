@@ -21,6 +21,8 @@
     </div>
     <div class="description">
         <?= $product['short']; ?>
+        <div class="price"><?= $product['price']; ?> <span class="rub-1">Р</span></div>
+        <div class="button">КУПИТЬ</div>
         <div class="price"><?= $product['price']; ?> <span class="rub">Р</span></div>
         <div class="button product-buy" data-id="<?= $product['ID']; ?>">КУПИТЬ</div>
     </div>
