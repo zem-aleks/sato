@@ -38,7 +38,7 @@
                         <div class="top-line">
                             <!--<div class="sign-up">Вход</div>
                             <div class="sign-in">Регистрация</div>-->
-                            <div class="cart">Корзина: пусто</div>
+                            <a href="/cart" class="cart">Корзина: пусто</a>
                         </div>
                         <div class="btm-line">
                             <a href="/" class="logo-main">ЖИВИ С КОМФОРТОМ</a>

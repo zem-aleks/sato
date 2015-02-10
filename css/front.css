@@ -119,6 +119,8 @@ header .top-line .cart {
     margin-left: 8px;
     padding-left: 50px;
     background: url(/images/front/cart.png)17px 7px no-repeat;
+    display: inline-block;
+    color: #fff;
 }
 header .btm-line {    
     height: 75px;
@@ -412,8 +414,8 @@ h1 {
 .contact-page .contacts p.address {
     margin-top: 35px;
 }
-.contact-page .write .text {
-    width: 371px;
+.text {
+    width: 353px;
     margin-bottom: 20px;
     border: 1px solid #eaeff0;
     padding-top: 12px;
@@ -421,7 +423,7 @@ h1 {
     padding-left: 15px;
     font-size: 18px;
     outline: none;
-    border-radius: 2px;
+    border-radius: 4px;
 }
 .contact-page .write textarea.text {
     height: 128px;
@@ -443,6 +445,8 @@ h1 {
     outline: none;
     padding: 10px 0px;
     cursor: pointer;
+    margin-top: 0px;
+    line-height: 22px;
 }
 .contact-page .map {
     margin-bottom: 70px;
@@ -735,11 +739,13 @@ section.catalog aside {
 .catalog .products .item:nth-child(3n) {
     margin-right: 0px;
 }
-.catalog .products .item .model {
+.item .model {
     font-size: 24px;
     margin-top: 33px;
     padding-left: 5px;
     padding-right: 5px;
+    text-transform: uppercase;
+    font-family: 'Roboto Light';
 }
 .catalog .view-more.processing {
     background-size: 20px 20px;
@@ -976,7 +982,6 @@ section.catalog-info {
     width: 100%;
     text-align: center;
 }
-
 .flex-control-nav li {
     width: 39px;
     cursor: pointer;
@@ -989,7 +994,6 @@ section.catalog-info {
     background: #fff no-repeat center center;
     background-size: 80%;
 }
-
 .flex-control-nav li.flex-active {
     border-color: #fddf52;
 }
@@ -999,7 +1003,6 @@ section.catalog-info {
     -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.05); 
     box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.05);
 }
-
 .flex-direction-nav a.flex-next:hover {
     background: #fff url(/images/front/arrows.png) no-repeat -25px 10px;  -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.05);  -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.05);  box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.05);
 }
@@ -1075,6 +1078,130 @@ section.catalog-info {
 }
 .item-details img {              
     box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.2);
+header .top-line .cart:hover {
+    background-color: #ef444c;
+    border: 1px solid transparent;
+}
+.cart .product {
+    height: 105px;
+    border-bottom: 1px solid #eaeff0;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    position: relative;
+}
+.model span:first-child {
+    font-family: 'Roboto Bold';
+}
+.cart .product .item {
+    float: left;
+    margin-right: 0;
+    width: 575px;
+    height: 100px;
+}
+.pic {
+    width: 80px;
+    height: 100px;
+    background-color: #e3e3e3;
+    float: left;
+    margin-right: 20px;
+}
+.cart .product .quantity {
+    width: 380px;
+    float: right;
+    height: 50px;
+    line-height: 108px;
+}
+.cart .product .quantity > div {
+    display: inline-block;
+    vertical-align: middle;
+}
+section.form-order {
+    margin-top: 60px;
+    margin-bottom: 250px;
+}
+.cart .product .item .model {
+    padding-left: 2px;
+    display: inline-block;
+    max-width: 466px;
+    overflow: hidden;
+    line-height: 108px;
+    margin-top: 0;
+}
+.cart h1 {
+    margin-bottom: 6px;
+}
+.cart .product .quantity .number {
+    width: 50px;
+    border: 1px solid #eaeff0;
+    font-weight: bold;
+    line-height: 48px;
+    text-align: center;
+    border-radius: 3px;
+    font-size: 18px;
+}
+.cart .product .quantity .price {
+    font-size: 24px;
+    font-family: 'Roboto Bold';
+    padding-left: 18px;
+}
+.cart .product .close {
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+    top: 50px;
+    right: 60px;
+}
+.cart .total {
+    text-align: right;
+    padding-right: 55px;
+    font-size: 22px;
+    margin-top: 26px;
+}
+.cart .total span {
+    font-weight: bold;
+}
+.form-order .enter-data {
+    width: 370px;
+    float: left;
+    margin-right: 70px;
+}
+.form-order .details {
+    float: right;
+    width: 515px;
+}
+.form-order h1 {
+    margin-bottom: 30px;
+}
+.text:focus {
+    border: 2px solid #fada47;
+    font-weight: bold;
+    padding-top: 12px;
+    padding-bottom: 11px;
+}
+textarea.text {
+    resize: none;
+    width: 351px;
+    font-size: 18px;
+    height: 112px;
+    padding-top: 23px;
+    padding-left: 18px;
+}
+.form-order input.button {
+    margin-top: 14px;
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+    width: 100%;
+    outline: none;
+    border: none;
+}
+.form-order .details p {
+    line-height: 20px;
+    margin-bottom: 26px;
+}
+.form-order .enter-data .address {
+    background: url(/images/front/arrowdown.png) 340px 18px no-repeat;
+}
 }
 .product-view .flex-control-nav {
     height: 70px;
