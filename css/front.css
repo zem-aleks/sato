@@ -344,7 +344,7 @@ section.advantages .point .adv {
 }
 section.about {
     padding-top: 66px;
-    padding-bottom: 95px;
+    padding-bottom: 75px;
     position: relative;
 }
 section.about .heading {
@@ -355,6 +355,8 @@ section.about .heading {
 section.about .text {
     width: 700px;
     margin-left: 22px;
+    border: none;
+    padding: 0px;
 }
 section.about .text p {
     line-height: 21px;
@@ -414,7 +416,7 @@ h1 {
 .contact-page .contacts p.address {
     margin-top: 35px;
 }
-.form-order .text {
+.text {
     width: 353px;
     margin-bottom: 20px;
     border: 1px solid #eaeff0;
@@ -718,7 +720,7 @@ section.catalog aside {
 }
 .catalog aside ul li .active {
     background-color: #fddf52;    
-    height: 18px;
+    height: 28px;
     padding-left: 12px;
     padding-right: 16px;
     line-height: 12px;
@@ -1289,4 +1291,17 @@ textarea.text {
     padding-right: 30px;
     background: url(/images/front/pdf.png) no-repeat right top;
     margin-top: 4px;
+}
+.page .contain .text {
+    width: 700px;
+    border: 0;
+}
+.view .text {
+    border: none;
+    width: 685px;
+    padding-top: 0;
+    overflow: hidden;
+}
+.article .text-data .title:hover {
+    color: #25bbe6;
 }
