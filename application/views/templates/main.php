@@ -14,50 +14,21 @@
         <div class="products flexslider">
             <ul class="slides">
                 <li>
-                    <a href="" class="item">
-                        <div class="pic">
-                            <img src="/images/front/cover.png" alt="cover" />
-                        </div>
-                        <div class="model">SATO <span>DB300</span></div>
-                        <div class="price">20 900</div>
-                    </a>
-                    <a href="" class="item">
-                        <div class="pic">
-                            <img src="/images/front/cover.png" alt="cover" />
-                        </div>
-                        <div class="model"><SATO <span>DB400</span></div>
-                        <div class="price">30 900</div>
-                    </a>
-                    <a href="" class="item">
-                        <div class="pic">
-                            <img src="/images/front/cover.png" alt="cover" />
-                        </div>
-                        <div class="model">SATO <span>DB500</span></div>
-                        <div class="price">50 900</div>
-                    </a>
-                </li>
-                <li>
-                    <a href="" class="item">
-                        <div class="pic">
-                            <img src="/images/front/cover.png" alt="cover" />
-                        </div>
-                        <div class="model">SATO <span>DB300</span></div>
-                        <div class="price">20 900</div>
-                    </a>
-                    <a href="" class="item">
-                        <div class="pic">
-                            <img src="/images/front/cover.png" alt="cover" />
-                        </div>
-                        <div class="model"><SATO <span>DB400</span></div>
-                        <div class="price">30 900</div>
-                    </a>
-                    <a href="" class="item">
-                        <div class="pic">
-                            <img src="/images/front/cover.png" alt="cover" />
-                        </div>
-                        <div class="model">SATO <span>DB500</span></div>
-                        <div class="price">50 900</div>
-                    </a>
+                    <? foreach ($models as $key => $model): ?>
+                    
+                        <? if($key > 0 && $key % 3 == 0):?>
+                            </li><li>
+                        <? endif;?>
+                    
+                        <a href="/products/view/<?=$model['chpu'];?>" class="item">
+                            <div class="pic">
+                                <img src="/uploads/products/thumb/<?=$model['image'];?>" alt="<?=$model['name'];?>" />
+                            </div>
+                            <div class="model"><?=$model['brand']['name'];?> <span><?=$model['name'];?></span></div>
+                            <div class="price"><?=(int)$model['price'];?></div>
+                        </a>
+                    
+                    <? endforeach; ?>
                 </li>
             </ul>
         </div>

@@ -4,7 +4,7 @@
 <div class="title"><?= $title; ?></div>
 <?= form_open_multipart($form_action, array('name' => 'editform')); ?>
 
-Фотографии:<br/>
+Фотографии (оптимальный размер 750x750):<br/>
 <div class="admin-images">
     <? foreach ($page['images'] as $image): ?>
         <div class="for-image">
