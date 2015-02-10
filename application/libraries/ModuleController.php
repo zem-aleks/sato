@@ -87,6 +87,13 @@ class ModuleController extends Controller{
         return $entries;
     }
     
+    function getFilterEntries($start, $limit, $status, $filter, $order = 'c1.sort') {
+        $entries = $this->{$this->md}->getFilterEntries($start, $limit, $status, $filter, $order);
+        foreach ($entries as &$entry)
+            $entry = $this->modifyEntry($entry);
+        return $entries;
+    }
+    
     function getEntryByChpu($chpu) {
         $entry = $this->{$this->md}->getEntryByChpu($chpu);
         return $this->modifyEntry($entry);

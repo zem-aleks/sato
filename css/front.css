@@ -736,15 +736,18 @@ section.catalog aside {
 }
 .catalog .products .item .model {
     font-size: 24px;
-    font-family: 'Roboto Bold';
     margin-top: 33px;
-    padding-left: 25px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.catalog .view-more.processing {
+    background-size: 20px 20px;
 }
 .catalog .products .item .price {
     font-size: 24px;
     font-family: 'Roboto Bold';
     color: #ff585d;
-    padding-left: 25px;
+    padding-left: 5px;
     padding-top: 2px;
 }
 .catalog aside ul li h2 {
@@ -771,6 +774,8 @@ section.catalog aside {
 }
 .catalog .view-more {
     background-color: #faf9fa;
+    background: url(/images/front/preloader.gif) no-repeat 105px center;
+    background-size: 0;
     width: 415px;
     height: 45px;
     line-height: 45px;
