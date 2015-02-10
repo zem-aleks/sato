@@ -24,7 +24,7 @@ $(document).ready(function() {
         });
     });
     
-    $('.main-slider').flexslider({
+    var mainSlider = $('.main-slider').flexslider({
         slideshow : false,
         animation : 'slide',
         prevText: "",
@@ -32,7 +32,21 @@ $(document).ready(function() {
         manualControls : '.main-control-nav li',
         selector : '.main-slides > li',
         directionNav: false,  
-    });
+    }).data('flexslider');
+    
+    function nextSlide()
+    {
+        var total = $('.main-slider .main-control-nav li').length;
+        var index = $('.main-slider .main-control-nav .flex-active').index();
+        mainSlider.flexAnimate((index+1) % total);
+    }
+    
+    function prevSlide()
+    {
+        var total = $('.main-slider .main-control-nav li').length;
+        var index = $('.main-slider .main-control-nav .flex-active').index();
+        mainSlider.flexAnimate((index-1) % total);
+    }
     
     $('.view-more').click(function(){
         var $this = $(this);

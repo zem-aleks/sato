@@ -33,7 +33,9 @@ class Products extends ModuleController {
         if(!empty($entry['images']))
             $entry['image'] = $entry['images'][0]['image'];
         $entry['brand'] = $this->load->module('dictionary')->getValue($entry['id_brand']);
+        $entry['category'] = $this->load->module('dictionary')->getValue($entry['id_category']);
         $entry['date'] = modifyDate($entry['date']);
+        $entry['price'] = (int)$entry['price'];
         return $entry;
     }
     

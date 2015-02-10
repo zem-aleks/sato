@@ -1,28 +1,25 @@
 <section class="top-slider">
     <div class="container main-slider">
         <ul class="main-slides">
-            <? for($k = 0; $k < 2; ++$k): ?>
+            <? foreach ($sliderProducts as $product): ?>
             <li>
                 <div class="item-decription">
-                    <div class="item-category">Электронное биде</div>
-                    <a href="" class="item-name"><span class="brand">Sato</span> DB300</a>
+                    <div class="item-category"><?=$product['category']['name'];?></div>
+                    <a href="/products/view/<?=$product['chpu'];?>" class="item-name"><span class="brand"><?=$product['brand']['name'];?></span> <?=$product['name'];?></a>
                     <div class="item-details">
-                        <p>
-                            Модель класса "Комфорт"<br>
-                            4 режима работы<br>
-                            12 функций
-                        </p>
+                        <?=$product['slider_desc'];?>
                     </div>
-                    <div class="price">20 990<span class="rub">Р</span></div>
+                    <div class="price"><?=$product['price'];?><span class="rub">Р</span></div>
                     <div class="button">КУПИТЬ</div>
                 </div>
 
                 <div class="item-gallery">
                     <div class="thumbs gallery-slider">
                         <ul class="slides">
+                            <? foreach ($product['images'] as $image): ?>
                             <li class="pic">
-                                <img src="/uploads/products/original/f4270a139af90af1496cfbb63a8e50f8.jpg" alt="" />
-                                <div class="tizers">
+                                <img src="/uploads/products/original/<?=$image['image'];?>" alt="" />
+                                <!--<div class="tizers">
                                     <div class="tizer" style="left: 20px; top: 20px;">
                                         <div class="tizer-msg">
                                             <div class="tizer-title">Информационное табло</div>
@@ -30,27 +27,36 @@
                                             лучше ориентироваться в полезных функциях устройства
                                         </div>
                                     </div>
-                                </div>
+                                </div>-->
                             </li>
-                            <li class="pic">
-                                <img src="/uploads/products/original/f4270a139af90af1496cfbb63a8e50f8.jpg" alt="" />
-                            </li>
+                            <? endforeach; ?>
                         </ul>
+                        
+                        <? if(count($product['images']) > 1): ?>
                         <ul class="flex-control-nav">
-                            <li style="background-image: url(/uploads/products/thumb/f4270a139af90af1496cfbb63a8e50f8.jpg)"></li>
-                            <li style="background-image: url(/uploads/products/thumb/f4270a139af90af1496cfbb63a8e50f8.jpg)"></li>
+                            <? foreach ($product['images'] as $image): ?>
+                            <li style="background-image: url(/uploads/products/thumb/<?=$image['image'];?>)"></li>
+                            <? endforeach; ?>
                         </ul>
+                        <? endif; ?>
                     </div>
                 </div>
 
                 <div class="clear"></div>
             </li>
-            <? endfor; ?>
+            <? endforeach; ?>
         </ul>
+        <!--<ul class="main-control-direction">
+            <? foreach ($sliderProducts as $product): ?>
+            <li><?=$product['name'];?></li>
+            <? endforeach; ?>
+        </ul>-->
         <ul class="main-control-nav">
-            <li>DB300</li>
-            <li>DB400</li>
+            <? foreach ($sliderProducts as $product): ?>
+            <li><?=$product['name'];?></li>
+            <? endforeach; ?>
         </ul>
+        
     </div>
 </section>
 <section class="desk">

@@ -932,8 +932,8 @@ section.catalog-info {
 }
 .item-gallery {
     float: left;
-    width: 370px;
-    height: 420px;
+    width: 400px;
+    height: 460px;
     position: relative;
     margin-bottom: 50px;
 }
@@ -1032,29 +1032,36 @@ section.catalog-info {
     padding-bottom: 75px;
     padding-top: 50px;
 }
-.main-control-nav li {
+
+.main-control-nav li, .main-control-direction li {
     display: inline-block;
     font-size: 24px;
     border-bottom: 1px dotted;
     cursor: pointer;
     margin-right: 60px;
 }
-
-.main-control-nav {
+.main-control-direction li {
+    height: 0;
+    border: none;
+}
+.main-control-nav, .main-control-direction{
     position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 52px;
     background: #fff;
+    height: 52px;
     text-align: center;
     padding-top: 23px;
+}
+.main-control-direction {
+    background: #fff;
 }
 
 .main-control-nav li:hover {
     border-color: transparent;
 }
-.main-control-nav li:last-child {
+.main-control-nav li:last-child, .main-control-direction li:last-child {
     margin-right: 0px;
 }
 .main-control-nav li.flex-active {
