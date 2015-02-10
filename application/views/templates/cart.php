@@ -15,7 +15,7 @@
         <div class="quantity">
             <div>Количество:</div>
             <input type="text" number="" class="number" placeholder="1"/>
-            <div class="price">20 900Р</div>
+            <div class="price">20 900 <span class="rub rub-2">Р</span></div>
         </div>
         <a href="" class="close">х</a>
     </div>
@@ -34,11 +34,11 @@
         <div class="quantity">
             <div>Количество:</div>
             <div class="number">1</div>
-            <div class="price">20 900Р</div>
+            <div class="price">20 900Р <span class="rub rub-2">Р</span></div>
         </div>
         <a href="" class="close">х</a>
     </div>
-    <div class="total">Общая сумма: <span class="price">41 800 Р</span></div>
+    <div class="total">Общая сумма: <span class="price">41 800 <span class="rub rub-2">Р</span></span></div>
 </section>
 <section class="form-order container">
     <h1>Форма заказа</h1>
