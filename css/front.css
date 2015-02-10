@@ -1077,6 +1077,7 @@ section.catalog-info {
     border-bottom-color: #fff;   border-width: 30px;   margin-left: -30px;
 }
 .item-details img {              
+    box-shadow: 8px 5px 15px 0px rgba(0,0,0,0.2);
     box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.2);
 }
 header .top-line .cart:hover {

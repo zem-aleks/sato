@@ -86,7 +86,7 @@
                                 <img src="/uploads/products/thumb/<?=$model['image'];?>" alt="<?=$model['name'];?>" />
                             </div>
                             <div class="model"><?=$model['brand']['name'];?> <span><?=$model['name'];?></span></div>
-                            <div class="price"><?=(int)$model['price'];?></div>
+                            <div class="price"><?=$model['price'];?></div>
                         </a>
                     
                     <? endforeach; ?>
