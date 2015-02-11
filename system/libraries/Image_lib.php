@@ -513,6 +513,8 @@ class CI_Image_lib {
 		}
 
 		$dst_img = $create($this->width, $this->height);
+                $white = imagecolorallocate($dst_img, 255, 255, 255);
+                imagefill($dst_img, 0, 0, $white);
 		$copy($dst_img, $src_img, 0, 0, $this->x_axis, $this->y_axis, $this->width, $this->height, $this->orig_width, $this->orig_height);
 
 		//  Show the image

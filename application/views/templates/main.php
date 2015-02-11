@@ -85,7 +85,7 @@
                             <div class="pic">
                                 <img src="/uploads/products/thumb/<?=$model['image'];?>" alt="<?=$model['name'];?>" />
                             </div>
-                            <div class="model"><?=$model['brand']['name'];?> <span><?=$model['name'];?></span></div>
+                            <div class="model"><span><?=$model['brand']['name'];?></span> <span><?=$model['name'];?></span></div>
                             <div class="price"><?=$model['price'];?> <span class=" rub rub-2">P</span></div>
                         </a>
                     

@@ -974,7 +974,7 @@ section.catalog-info {
 .tech-info table tbody tr {
 }
 .gallery-slider {
-    padding-bottom: 50px;
+    padding-bottom: 70px;
     position: relative;
 }
 
@@ -1094,7 +1094,7 @@ header .top-line .cart:hover {
     padding-top: 10px;
     position: relative;
 }
-.model span:first-child {
+section.models .products .item span:first-child {
     font-family: 'Roboto Bold';
 }
 .cart .product .item {

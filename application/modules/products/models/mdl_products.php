@@ -44,8 +44,8 @@ class Mdl_products extends ModuleModel {
         $data['price'] = $this->input->post('price');
         $data['id_category'] = $this->input->post('id_category');
         $data['id_brand'] = $this->input->post('id_brand');
-        $data['on_main'] = $this->input->post('on_main')? 1 : 0;
-        $data['on_slider'] = $this->input->post('on_main')? 1 : 0;
+        $data['on_main'] = $this->input->post('on_main');
+        $data['on_slider'] = $this->input->post('on_slider');
         $data['slider_desc'] = $this->input->post('slider_desc');
         $data['short'] = $this->input->post('short');
         $data['content'] = $this->input->post('content');
@@ -89,7 +89,7 @@ class Mdl_products extends ModuleModel {
         $data['mdesc'] = $this->input->post('mdesc');
         $data['chpu'] = $this->input->post('chpu');
         $data['on_main'] = $this->input->post('on_main')? 1 : 0;
-        $data['on_slider'] = $this->input->post('on_main')? 1 : 0;
+        $data['on_slider'] = $this->input->post('on_slider')? 1 : 0;
         $data['slider_desc'] = $this->input->post('slider_desc');
         if (empty($data['chpu']))
             $data['chpu'] = $this->checkChpu(rus2translit($data['name']));
