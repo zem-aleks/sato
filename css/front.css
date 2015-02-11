@@ -247,6 +247,7 @@ section.models .products .item .price {
 }
 section.models .products .item .model {
     padding-left: 20px;
+    font-family: 'Roboto Bold';
 }
 section.compare .heading {
     padding-top: 90px;
@@ -1299,6 +1300,7 @@ textarea.text {
 .page .contain .text {
     width: 700px;
     border: 0;
+    padding-left: 0;
 }
 .view .text {
     border: none;
