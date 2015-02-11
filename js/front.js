@@ -58,7 +58,7 @@ $(document).ready(function () {
         var start = $('.item').length;
         var limit = 6;
         var category = $('.catalog').data('id');
-        var order = $('.catalog').data('sort');
+        var order = $('.catalog[data-sort]').data('sort');
         $.ajax({
             url: '/catalog/products/' + start + '/' + limit + '/'
                     + category + '/' + order,
