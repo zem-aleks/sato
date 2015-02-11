@@ -815,9 +815,7 @@ section.catalog aside {
     border-bottom: 1px dotted #15c1ec;
 }
 section.catalog-info .gallery {
-    width: 380px;
-    float: left;
-    margin-right: 14px;
+    width: 350px;  float: left;  margin-right: 44px;
 }
 section.catalog-info .description {
     width: 490px;
