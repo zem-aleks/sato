@@ -11,7 +11,7 @@
                 </div>
                 <div class="model">
                     <span><?=$product['brand']['name'];?></span>
-                    <span><?=$product['name'];?></span>
+                    <?=$product['name'];?>
                 </div>
             </a>
         </div>
