@@ -1348,3 +1348,6 @@ textarea.text {
     font-size: 20px;
     margin-left: 27px;
 }
+.item .model span {
+    font-family: 'Roboto Bold';
+}
