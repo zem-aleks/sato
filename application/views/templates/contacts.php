@@ -2,7 +2,8 @@
     <div class="container">
         <div class="contacts">
             <h1>Контакты</h1>
-            <div class="phone">
+            <?=$view['content']; ?>
+            <!--<div class="phone">
                 <div class="number">+7(495)760-27-80</div>
                 <span class="small">единый телефон для всех отделов</span>
             </div>
@@ -25,7 +26,7 @@
             <p>
                 <span class="small">г. Москва, Волгоградский проспект </span>
                 <br><span class="small">д. 32, корпус 25, 2 этаж, павильон 59</span>
-            </p>
+            </p>-->
         </div>
         <div class="write">
             <h1>Обратная связь</h1>

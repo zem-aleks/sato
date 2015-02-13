@@ -68,6 +68,7 @@ class Products extends ModuleController {
     public function modifyViewContent($content)
     {
         $content['product'] = $content['view'];
+        $content['sizes'] = $this->load->module('dictionary')->getDictionary('sizes');
         return parent::modifyViewContent($content);
     }
 

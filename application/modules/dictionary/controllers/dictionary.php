@@ -28,7 +28,7 @@ class Dictionary extends Controller {
             'categories' => array(
                 'name' => 'Категории товаров',
                 'placeholder' => 'Описание категории (not required)',
-                'dictionary' => $this->{$this->md}->getDictionary('category')
+                'dictionary' => $this->{$this->md}->getDictionary('categories')
             ),
             'sizes' => array(
                 'name' => 'Размеры',

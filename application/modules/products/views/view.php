@@ -22,6 +22,16 @@
     <div class="description">
         <?= $product['short']; ?>
         <div class="price"><?= $product['price']; ?> <span class="rub-1">Р</span></div>
+        <? if($product['category']['content'] == 1): ?>
+        <div class="select-size">
+            <label for="product-size">Выберите размер:</label>
+            <select id="product-size">
+                <? foreach($sizes as $size): ?>
+                <option><?=$size['name']; ?></option>
+                <? endforeach ;?>
+            </select>
+        </div>
+        <? endif;?>
         <div class="button product-buy" data-id="<?= $product['ID']; ?>">КУПИТЬ</div>
     </div>
     <div class="clear"></div>
