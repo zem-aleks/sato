@@ -722,10 +722,10 @@ section.catalog aside {
 }
 .catalog aside ul li .active {
     background-color: #fddf52;    
-    height: 28px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     padding-left: 12px;
     padding-right: 16px;
-    line-height: 12px;
     margin-top: 8px;  
     margin-left: -9px;  
     border: none;
