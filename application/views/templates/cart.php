@@ -11,7 +11,7 @@
                 </div>
                 <div class="model">
                     <span><?=$product['brand']['name'];?></span>
-                    <span><?=$product['name'];?> <?=$product['detail']? ' <b style="text-transform: none;">(Размер - '.$product['detail'].')</b>' : ''; ?></span>
+                    <?=$product['name'];?> <?=$product['detail']? ' <b style="text-transform: none;">(Размер - '.$product['detail'].')</b>' : ''; ?>
                 </div>
             </a>
         </div>
