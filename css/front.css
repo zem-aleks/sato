@@ -418,7 +418,7 @@ h1 {
     margin-top: 35px;
 }
 .text {
-    width: 353px;
+    width: 370px;
     margin-bottom: 20px;
     border: 1px solid #eaeff0;
     padding-top: 12px;
@@ -433,13 +433,13 @@ h1 {
     border-radius: 3px;
     resize: none;
     margin-bottom: 25px;
-    width: 348px;
+    width: 365px;
 }
 .write .contact-description {
     width: 388px;
 }
 .contact-page .write .contact-submit {
-    width: 370px;
+    width: 388px;
     background-color: #909ea9;
     border: none;
     border-radius: 2px;
@@ -1179,12 +1179,12 @@ section.form-order {
 .text:focus {
     border: 2px solid #fada47;
     font-weight: bold;
-    padding-top: 12px;
-    padding-bottom: 11px;
+    padding-top: 12;
+    padding-bottom: 12px;
 }
 textarea.text {
     resize: none;
-    width: 351px;
+    width: 365px;
     font-size: 18px;
     height: 112px;
     padding-top: 23px;
@@ -1205,7 +1205,7 @@ textarea.text {
 }
 .form-order .enter-data .address {
     background: url(/images/front/arrowdown.png) 340px 18px no-repeat;
-    width: 370px;
+    width: 388px;
     cursor: pointer;
     -webkit-appearance: none;
 }
@@ -1331,4 +1331,8 @@ textarea.text {
 }
 .cart .product .pic img {
     vertical-align: middle;
+}
+.contact-page .write textarea.text:focus {
+    height: 128px;
+    padding-top: 24px;
 }
