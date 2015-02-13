@@ -81,10 +81,11 @@ class Mail extends Controller
         $sum=0.;
         foreach($items as $item)
         {
+            $detail = $item['detail']? ' (Размер - ' . $item['detail'] . ')' : '';
             $text.='<tr>';
             $text.='<td>'.$k++.'</td>';
             $text.='<td>'.$item['ID'].'</td>';
-            $text.='<td>'.$item['name'].'</td>';
+            $text.='<td>'.$item['name']. $detail . '</td>';
             $text.='<td>'.$item['price'].' руб.</td>';
             $text.='<td>'.$item['count'].'</td>';
             $text.='<td>'.$item['count']*$item['original_price'].' руб.</td>';

@@ -11,7 +11,7 @@
                 </div>
                 <div class="model">
                     <span><?=$product['brand']['name'];?></span>
-                    <span><?=$product['name'];?></span>
+                    <span><?=$product['name'];?> <?=$product['detail']? ' <b style="text-transform: none;">(Размер - '.$product['detail'].')</b>' : ''; ?></span>
                 </div>
             </a>
         </div>
@@ -24,7 +24,7 @@
     </div>
     <? endforeach; ?>
     
-    <div class="total">Общая сумма: <span class="price"><span class="cart-sum"><?=number_format((int)$sum, 0, ',', ' ');?><span class="rub-1 rub-2">Р</span></div>
+    <div class="total">Общая сумма: <span class="price"><span class="cart-sum"><?=number_format((int)$sum, 0, ',', ' ');?></span> <span class="rub-1 rub-2">Р</span></div>
 </section>
 <section class="form-order container">
     <h1>Форма заказа</h1>

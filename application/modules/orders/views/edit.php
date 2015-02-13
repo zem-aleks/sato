@@ -17,7 +17,7 @@
         Адрес:
         <textarea class="order-address" name="address"><?=$order['detail']['address']; ?></textarea>
         <br/><br/>
-        <i>Чтобы изменить\добавить товар, введите артикул и нажмите ENTER. Измениния вступят в силу при нажатии кнопки "применить"</i>
+        <!--<i>Чтобы изменить\добавить товар, введите артикул и нажмите ENTER. Измениния вступят в силу при нажатии кнопки "применить"</i>
         <table class="items" border="0" cellpadding="0" cellspacing="0">
             <thead>
                 <tr>
@@ -46,14 +46,14 @@
                     <td class="add-row" colspan="6">Добавить</td>
                 </tr>
             </tbody>
-        </table>
+        </table>-->
         <div class="clear"></div>
     </div>
 
     Установить статус: 
     <?=form_dropdown('select_status', $status_list, (int) $order['detail']['status']);?>
     <div class="cancel-comment">
-        Комментарий к заказу:
+        Комментарий администратора к заказу:
         <textarea><?= $order['detail']['admin_comment'];?></textarea>
     </div>
     <center><a class="apply-status" data-id="<?=$order['detail']['ID'];?>" href="javascript: void(0);">Применить</a></center><br/><br/>

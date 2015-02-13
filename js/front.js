@@ -83,7 +83,10 @@ $(document).ready(function () {
     $('.product-buy').click(function () {
         var id = $(this).data('id');
         var count = 1;
-        addProduct(id, count, null);
+        var detail = '';
+        if($('#product-size').length > 0)
+            detail = $('#product-size').val();
+        addProduct(id, count, detail);
     });
 
     $('.product-remove').click(function () {
@@ -154,9 +157,7 @@ function updateCart()
             count: $(this).find('.number').val()
         });
     });
-    console.log(items);
-    $.post('/ajax/updateCart', {items: items}, function () {
-    });
+    $.post('/ajax/updateCart', {items: items}, function () {});
 }
 
 function deleteAllCart()
