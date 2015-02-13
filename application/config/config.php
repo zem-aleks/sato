@@ -11,7 +11,10 @@
 |	http://example.com/
 |
 */
-$config['base_url']	= "http://sato.dev";
+if ($_SERVER['SERVER_NAME'] == 'sato.dev')
+    $config['base_url']	= "http://sato.dev";
+else
+    $config['base_url']	= "http://satoshop.ru";
 
 /*
 |--------------------------------------------------------------------------
