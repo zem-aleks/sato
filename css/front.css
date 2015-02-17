@@ -1267,6 +1267,7 @@ textarea.text {
     text-align: center;
     padding: 8px 12px;
     border-radius: 4px;
+    margin-bottom: 16px;
 }
 .tech-info table tr:nth-child(2n) td {
     background-color: #fff;

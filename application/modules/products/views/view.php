@@ -26,8 +26,8 @@
         <div class="select-size">
             <label for="product-size">Выберите размер:</label>
             <select id="product-size">
-                <? foreach($sizes as $size): ?>
-                <option><?=$size['name']; ?></option>
+                <? foreach($product['sizes'] as $size): ?>
+                <option><?=$size; ?></option>
                 <? endforeach ;?>
             </select>
         </div>

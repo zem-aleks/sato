@@ -30,11 +30,11 @@ class Dictionary extends Controller {
                 'placeholder' => 'Описание категории (not required)',
                 'dictionary' => $this->{$this->md}->getDictionary('categories')
             ),
-            'sizes' => array(
+            /*'sizes' => array(
                 'name' => 'Размеры',
                 'placeholder' => 'Описание размера (not required)',
                 'dictionary' => $this->{$this->md}->getDictionary('sizes')
-            ),
+            ),*/
             'brands' => array(
                 'name' => 'Бренды',
                 'placeholder' => 'Описание бренда (not required)',

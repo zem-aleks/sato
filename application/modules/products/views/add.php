@@ -30,8 +30,11 @@
 Категория товара:<br />
 <?= form_select('id_category', 'ID', 'name', $categories, $page['id_category']); ?>
 
-Бренд:<br />
+<br /><br />Бренд:<br />
 <?= form_select('id_brand', 'ID', 'name', $brands, $page['id_brand']); ?>
+
+<br /><br />Размеры (каждый размер с новой строчки):
+<textarea rows="5" name="sizes"><?= set_value('sizes', $page['sizes']) ?></textarea>
 
 <br /><br />
 <label>

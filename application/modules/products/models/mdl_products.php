@@ -55,6 +55,7 @@ class Mdl_products extends ModuleModel {
         $data['mdesc'] = $this->input->post('mdesc');
         $data['chpu'] = $this->input->post('chpu');
         $data['sort'] = $this->getSort();
+        $data['sizes'] = $this->input->post('sizes');
         if (empty($data['chpu']))
             $data['chpu'] = $this->checkChpu(rus2translit($data['name']));
         
@@ -84,6 +85,7 @@ class Mdl_products extends ModuleModel {
         $data['id_brand'] = $this->input->post('id_brand');
         $data['short'] = $this->input->post('short');
         $data['content'] = $this->input->post('content');
+        $data['sizes'] = $this->input->post('sizes');
         $data['title'] = $this->input->post('title');
         $data['mkeys'] = $this->input->post('mkeys');
         $data['mdesc'] = $this->input->post('mdesc');

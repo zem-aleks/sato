@@ -97,7 +97,7 @@ class Cart extends Controller {
             $is_find = false;
             $cartItems = $this->{self::$md}->getCartIds($_SESSION['cart']);
             foreach ($cartItems as $product) {
-                if ((int)$product['id_item'] === (int)$id) {
+                if ((int)$product['id_item'] === (int)$id && $product['detail'] == $detail) {
                     if ($count > 0) {
                         $data = array(
                             'count' => $product['count'] + $count,

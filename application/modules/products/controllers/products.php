@@ -42,6 +42,7 @@ class Products extends ModuleController {
         $entry['date'] = modifyDate($entry['date']);
         $entry['original_price'] = $entry['price'];
         $entry['price'] = number_format((int)$entry['price'], 0, ',', ' ');
+        $entry['sizes'] = explode("\n", $entry['sizes']);
         return $entry;
     }
     
