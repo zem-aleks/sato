@@ -22,7 +22,7 @@
     <div class="description">
         <?= $product['short']; ?>
         <div class="price"><?= $product['price']; ?> <span class="rub-1">Р</span></div>
-        <? if($product['category']['content'] == 1): ?>
+        <? if(!empty($product['sizes']) && !empty($product['sizes'][0])): ?>
         <div class="select-size">
             <label for="product-size">Выберите размер:</label>
             <select id="product-size">
