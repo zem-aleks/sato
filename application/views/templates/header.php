@@ -9,6 +9,7 @@
 
         <link rel="shortcut icon" href="/images/front/favicon.ico" />
         <link href="/css/jquery-ui-1.9.2.custom.css" rel="stylesheet" type="text/css" />
+        <link href="/css/jquery.fancybox.css" rel="stylesheet" type="text/css" />
         <link href="/css/front.css" rel="stylesheet" type="text/css" />
         <!--<link href="css/lightbox.css" rel="stylesheet" />-->
         
@@ -17,6 +18,7 @@
         <script src="/js/jquery.placeholder.min.js" type="text/javascript"></script>
         <script src="/js/jquery.maskedinput.min.js" type="text/javascript"></script>
         <script src="/js/jquery.flexslider-min.js" type="text/javascript"></script>
+        <script src="/js/jquery.fancybox-1.3.1.pack.js" type="text/javascript"></script>
         <!--<script src="/js/lightbox.min.js"></script>-->
         <script src="/js/common.js" type="text/javascript"></script>
         <script src="/js/front.js" type="text/javascript"></script>

@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    
     $('a[href*=#]').bind("click", function (e) {
         $('html, body').stop().animate({
             scrollTop: 0
@@ -12,7 +13,7 @@ $(document).ready(function () {
         prevText: "",
         nextText: "",
     });
-
+    
     $('.gallery-slider').each(function () {
         var $this = $(this);
         var isDirectionNav = $this.closest('.product-view').length <= 0;
@@ -35,6 +36,17 @@ $(document).ready(function () {
         selector: '.main-slides > li',
         directionNav: false,
     }).data('flexslider');
+    
+    $('.slides .clone .gallery-item').removeClass('gallery-item').removeAttr('rel');
+    
+    $('.slides li:not(.clone) .gallery-item').fancybox({
+        'transitionIn': 'elastic',
+        'transitionOut': 'elastic',
+        'speedIn': 600,
+        'speedOut': 200,
+        'overlayShow': true
+    });
+
 
     function nextSlide()
     {

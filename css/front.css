@@ -1360,3 +1360,17 @@ footer .btm-line .details div {
     height: 215px;
     width: 200px;
 }
+#fancybox-right-ico, #fancybox-left-ico{
+    width: 50px;
+    height: 50px;
+}
+#fancybox-right-ico{
+    background: #000 url(/images/front/arrows.png) no-repeat -25px 10px;
+}
+#fancybox-left-ico{
+    background: #000 url(/images/front/arrows.png) no-repeat 14px 10px;
+}
+#fancybox-close {
+    width: 30px;
+    height: 30px;
+}

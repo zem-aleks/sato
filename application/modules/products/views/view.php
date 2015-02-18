@@ -5,7 +5,9 @@
             <ul class="slides">
                 <? foreach ($product['images'] as $image): ?>
                     <li class="pic">
-                        <img src="/uploads/products/original/<?= $image['image']; ?>" alt="" />
+                        <a class="gallery-item" href="/uploads/products/original/<?= $image['image']; ?>" rel="group1" >
+                            <img src="/uploads/products/original/<?= $image['image']; ?>" alt="" />
+                        </a>
                     </li>
                 <? endforeach; ?>
             </ul>
