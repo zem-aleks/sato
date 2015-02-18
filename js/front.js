@@ -27,7 +27,7 @@ $(document).ready(function () {
     });
 
     var mainSlider = $('.main-slider').flexslider({
-        slideshow: false,
+        slideshow: true,
         animation: 'slide',
         prevText: "",
         nextText: "",

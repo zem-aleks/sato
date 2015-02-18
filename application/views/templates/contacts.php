@@ -51,9 +51,9 @@
                 </div>
             </form>
         </div>
-        <h1>Как добраться ?</h1>
+        <!--<h1>Как добраться ?</h1>
         <div class="map">
             <?= $settings['map']; ?>
-        </div>
+        </div>-->
     </div>
 </div>
