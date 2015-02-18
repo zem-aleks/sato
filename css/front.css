@@ -802,7 +802,8 @@ section.catalog aside {
     float: right;
 }
 .catalog .sort {
-    width: 170px;
+    width: 140px;
+    padding-right: 30px;
     font-family: 'Roboto Regular';
     font-size: 14px;
     position: absolute;
