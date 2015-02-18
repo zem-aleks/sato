@@ -45,7 +45,8 @@ body {
     margin-top: 48px;
 }
 .main-wrapper {
-    min-height: 100%;
+    min-height: 100%;      
+    padding-bottom: 210px;
 }
 .heading {
     font-family: 'Roboto Bold';
@@ -176,7 +177,7 @@ nav ul li a:hover {
     color: #f13e45;
 }
 main {
-    padding-bottom: 210px;
+    /* padding-bottom: 210px; */
 }
 section.desk {
     background: url(/images/front/black-layer.jpg) center center no-repeat #050505;
@@ -313,7 +314,7 @@ section.advantages .point {
     height: 86px;
 }
 section.advantages .number {
-    color: #fb1;
+    color: #ff3b45;
     border: 3px solid;
     border-radius: 50%;
     text-align: center;
@@ -488,7 +489,7 @@ footer nav ul li .logo {
     width: 100px;
     height: 40px;
     margin-left: 37px;
-    background: url(/images/front/logo-fter.jpg) 0px 10px no-repeat;
+    background: url(/images/front/logo-neg.jpg) 0px 10px no-repeat;
 }
 footer nav ul li:last-child a {
     margin-right: 0;
@@ -502,11 +503,10 @@ footer .btm-line .details {
     width: 125px;
     height: 50px;
     padding-left: 135px;
-    padding-top: 14px;
+    padding-top: 10px;
     margin-right: 33px;
     margin-left: 22px;
     font-size: 16px;
-    line-height: 18px;
     background: url(/images/front/logo-details.jpg) 17px 18px no-repeat #fff;
     box-shadow: 7px 14px 26px #ededed;
 }
@@ -932,7 +932,7 @@ section.catalog-info {
 }
 .item-decription {
     float: left;
-    width: 340px;
+    width: 380px;
     margin-right: 100px;
     margin-bottom: 50px;
 }
@@ -1351,4 +1351,12 @@ textarea.text {
 }
 .item .model span {
     font-family: 'Roboto Bold';
+}
+footer .btm-line .details div {
+    text-align: center;
+    line-height: 15px;
+}
+.pic {
+    height: 215px;
+    width: 200px;
 }

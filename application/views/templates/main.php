@@ -222,12 +222,12 @@
         <div class="point two">
             <div class="number">2</div>
             <div class="adv">Высокое качество</div>
-            <div class="details">Вся продукция производится в Японии, что обеспечивает высочайшее качество</div>
+            <div class="details">Вся продукция производится в Корее, что обеспечивает высочайшее качество</div>
         </div>
         <div class="point three">
             <div class="number">3</div>
             <div class="adv">Гарантийное обслуживание</div>
-            <div class="details">На продукцию предоставляется год гарантии. Мы без проблем заменим бракованный товар</div>
+            <div class="details">На продукцию предоставляется расширенная гарантия 5 лет</div>
         </div>
     </div>
 </section>

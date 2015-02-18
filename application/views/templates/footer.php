@@ -11,7 +11,7 @@
             </ul>
         </nav>
         <div class="btm-line">
-            <div class="details">Для диллеров <b>satoworld.ru</b></div>
+            <a href="" class="details"><div>Официальный сайт <b>satoworld.ru</b></div></a>
             <div class="copyright">
                 <b>© SATO 2015</b>
                 <div class="about">Международная корпорация, производитель и надежный поставщик широкого спектра специальной электронной техники, электронной сантехнической продукции.</div>
