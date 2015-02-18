@@ -1033,7 +1033,14 @@ section.catalog-info {
     position: relative;
 }
 .top-slider {
-    background-image: -webkit-gradient( linear, left top, left bottom, color-stop(0, #F6F6F6), color-stop(0.5, #FAFAFA), color-stop(1, #F6F6F6) );  background-image: -o-linear-gradient(bottom, #F6F6F6 0%, #FAFAFA 50%, #F6F6F6 100%);  background-image: -moz-linear-gradient(bottom, #F6F6F6 0%, #FAFAFA 50%, #F6F6F6 100%);      
+    background: rgb(246,246,246); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(246,246,246,1) 0%, rgba(250,250,250,1) 51%, rgba(246,246,246,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(246,246,246,1)), color-stop(51%,rgba(250,250,250,1)), color-stop(100%,rgba(246,246,246,1)));
+    background: -webkit-linear-gradient(top,  rgba(246,246,246,1) 0%,rgba(250,250,250,1) 51%,rgba(246,246,246,1) 100%);
+    background: -o-linear-gradient(top,  rgba(246,246,246,1) 0%,rgba(250,250,250,1) 51%,rgba(246,246,246,1) 100%);
+    background: -ms-linear-gradient(top,  rgba(246,246,246,1) 0%,rgba(250,250,250,1) 51%,rgba(246,246,246,1) 100%);
+    background: linear-gradient(to bottom,  rgba(246,246,246,1) 0%,rgba(250,250,250,1) 51%,rgba(246,246,246,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f6f6', endColorstr='#f6f6f6',GradientType=0 );
     position: relative;
     padding-bottom: 75px;
     padding-top: 50px;
